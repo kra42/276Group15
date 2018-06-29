@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC754B7920E5C88500302A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B7820E5C88500302A58 /* AppDelegate.swift */; };
+		FC754B7B20E5C88500302A58 /* MyGardenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B7A20E5C88500302A58 /* MyGardenController.swift */; };
+		FC754B7D20E5C88500302A58 /* CropLibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B7C20E5C88500302A58 /* CropLibraryController.swift */; };
+		FC754B8020E5C88500302A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC754B7E20E5C88500302A58 /* Main.storyboard */; };
+		FC754B8220E5C88600302A58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC754B8120E5C88600302A58 /* Assets.xcassets */; };
+		FC754B8520E5C88600302A58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC754B8320E5C88600302A58 /* LaunchScreen.storyboard */; };
+		FC754B9020E5C88600302A58 /* CropBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B8F20E5C88600302A58 /* CropBookTests.swift */; };
+		FC754B9B20E5C88600302A58 /* CropBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B9A20E5C88600302A58 /* CropBookUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC754B8C20E5C88600302A58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC754B6D20E5C88500302A58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC754B7420E5C88500302A58;
+			remoteInfo = CropBook;
+		};
+		FC754B9720E5C88600302A58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC754B6D20E5C88500302A58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC754B7420E5C88500302A58;
+			remoteInfo = CropBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC754B7520E5C88500302A58 /* CropBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC754B7820E5C88500302A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC754B7A20E5C88500302A58 /* MyGardenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGardenController.swift; sourceTree = "<group>"; };
+		FC754B7C20E5C88500302A58 /* CropLibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropLibraryController.swift; sourceTree = "<group>"; };
+		FC754B7F20E5C88500302A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC754B8120E5C88600302A58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC754B8420E5C88600302A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC754B8620E5C88600302A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC754B8B20E5C88600302A58 /* CropBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CropBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC754B8F20E5C88600302A58 /* CropBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropBookTests.swift; sourceTree = "<group>"; };
+		FC754B9120E5C88600302A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC754B9620E5C88600302A58 /* CropBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CropBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC754B9A20E5C88600302A58 /* CropBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropBookUITests.swift; sourceTree = "<group>"; };
+		FC754B9C20E5C88600302A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC754B7220E5C88500302A58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC754B8820E5C88600302A58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC754B9320E5C88600302A58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC754B6C20E5C88500302A58 = {
+			isa = PBXGroup;
+			children = (
+				FC754B7720E5C88500302A58 /* CropBook */,
+				FC754B8E20E5C88600302A58 /* CropBookTests */,
+				FC754B9920E5C88600302A58 /* CropBookUITests */,
+				FC754B7620E5C88500302A58 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC754B7620E5C88500302A58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC754B7520E5C88500302A58 /* CropBook.app */,
+				FC754B8B20E5C88600302A58 /* CropBookTests.xctest */,
+				FC754B9620E5C88600302A58 /* CropBookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC754B7720E5C88500302A58 /* CropBook */ = {
+			isa = PBXGroup;
+			children = (
+				FC754B7820E5C88500302A58 /* AppDelegate.swift */,
+				FC754B7A20E5C88500302A58 /* MyGardenController.swift */,
+				FC754B7C20E5C88500302A58 /* CropLibraryController.swift */,
+				FC754B7E20E5C88500302A58 /* Main.storyboard */,
+				FC754B8120E5C88600302A58 /* Assets.xcassets */,
+				FC754B8320E5C88600302A58 /* LaunchScreen.storyboard */,
+				FC754B8620E5C88600302A58 /* Info.plist */,
+			);
+			path = CropBook;
+			sourceTree = "<group>";
+		};
+		FC754B8E20E5C88600302A58 /* CropBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC754B8F20E5C88600302A58 /* CropBookTests.swift */,
+				FC754B9120E5C88600302A58 /* Info.plist */,
+			);
+			path = CropBookTests;
+			sourceTree = "<group>";
+		};
+		FC754B9920E5C88600302A58 /* CropBookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC754B9A20E5C88600302A58 /* CropBookUITests.swift */,
+				FC754B9C20E5C88600302A58 /* Info.plist */,
+			);
+			path = CropBookUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC754B7420E5C88500302A58 /* CropBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC754B9F20E5C88600302A58 /* Build configuration list for PBXNativeTarget "CropBook" */;
+			buildPhases = (
+				FC754B7120E5C88500302A58 /* Sources */,
+				FC754B7220E5C88500302A58 /* Frameworks */,
+				FC754B7320E5C88500302A58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CropBook;
+			productName = CropBook;
+			productReference = FC754B7520E5C88500302A58 /* CropBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC754B8A20E5C88600302A58 /* CropBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC754BA220E5C88600302A58 /* Build configuration list for PBXNativeTarget "CropBookTests" */;
+			buildPhases = (
+				FC754B8720E5C88600302A58 /* Sources */,
+				FC754B8820E5C88600302A58 /* Frameworks */,
+				FC754B8920E5C88600302A58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC754B8D20E5C88600302A58 /* PBXTargetDependency */,
+			);
+			name = CropBookTests;
+			productName = CropBookTests;
+			productReference = FC754B8B20E5C88600302A58 /* CropBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC754B9520E5C88600302A58 /* CropBookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC754BA520E5C88600302A58 /* Build configuration list for PBXNativeTarget "CropBookUITests" */;
+			buildPhases = (
+				FC754B9220E5C88600302A58 /* Sources */,
+				FC754B9320E5C88600302A58 /* Frameworks */,
+				FC754B9420E5C88600302A58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC754B9820E5C88600302A58 /* PBXTargetDependency */,
+			);
+			name = CropBookUITests;
+			productName = CropBookUITests;
+			productReference = FC754B9620E5C88600302A58 /* CropBookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC754B6D20E5C88500302A58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "CMPT276-Group15";
+				TargetAttributes = {
+					FC754B7420E5C88500302A58 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					FC754B8A20E5C88600302A58 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = FC754B7420E5C88500302A58;
+					};
+					FC754B9520E5C88600302A58 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = FC754B7420E5C88500302A58;
+					};
+				};
+			};
+			buildConfigurationList = FC754B7020E5C88500302A58 /* Build configuration list for PBXProject "CropBook" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC754B6C20E5C88500302A58;
+			productRefGroup = FC754B7620E5C88500302A58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC754B7420E5C88500302A58 /* CropBook */,
+				FC754B8A20E5C88600302A58 /* CropBookTests */,
+				FC754B9520E5C88600302A58 /* CropBookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC754B7320E5C88500302A58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC754B8520E5C88600302A58 /* LaunchScreen.storyboard in Resources */,
+				FC754B8220E5C88600302A58 /* Assets.xcassets in Resources */,
+				FC754B8020E5C88500302A58 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC754B8920E5C88600302A58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC754B9420E5C88600302A58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC754B7120E5C88500302A58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC754B7D20E5C88500302A58 /* CropLibraryController.swift in Sources */,
+				FC754B7920E5C88500302A58 /* AppDelegate.swift in Sources */,
+				FC754B7B20E5C88500302A58 /* MyGardenController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC754B8720E5C88600302A58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC754B9020E5C88600302A58 /* CropBookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC754B9220E5C88600302A58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC754B9B20E5C88600302A58 /* CropBookUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC754B8D20E5C88600302A58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC754B7420E5C88500302A58 /* CropBook */;
+			targetProxy = FC754B8C20E5C88600302A58 /* PBXContainerItemProxy */;
+		};
+		FC754B9820E5C88600302A58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC754B7420E5C88500302A58 /* CropBook */;
+			targetProxy = FC754B9720E5C88600302A58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC754B7E20E5C88500302A58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC754B7F20E5C88500302A58 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC754B8320E5C88600302A58 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC754B8420E5C88600302A58 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC754B9D20E5C88600302A58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC754B9E20E5C88600302A58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC754BA020E5C88600302A58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CropBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CropBook.CropBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC754BA120E5C88600302A58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CropBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CropBook.CropBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC754BA320E5C88600302A58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CropBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CropBook.CropBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CropBook.app/CropBook";
+			};
+			name = Debug;
+		};
+		FC754BA420E5C88600302A58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CropBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CropBook.CropBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CropBook.app/CropBook";
+			};
+			name = Release;
+		};
+		FC754BA620E5C88600302A58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CropBookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CropBook.CropBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CropBook;
+			};
+			name = Debug;
+		};
+		FC754BA720E5C88600302A58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CropBookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CropBook.CropBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CropBook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC754B7020E5C88500302A58 /* Build configuration list for PBXProject "CropBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC754B9D20E5C88600302A58 /* Debug */,
+				FC754B9E20E5C88600302A58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC754B9F20E5C88600302A58 /* Build configuration list for PBXNativeTarget "CropBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC754BA020E5C88600302A58 /* Debug */,
+				FC754BA120E5C88600302A58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC754BA220E5C88600302A58 /* Build configuration list for PBXNativeTarget "CropBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC754BA320E5C88600302A58 /* Debug */,
+				FC754BA420E5C88600302A58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC754BA520E5C88600302A58 /* Build configuration list for PBXNativeTarget "CropBookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC754BA620E5C88600302A58 /* Debug */,
+				FC754BA720E5C88600302A58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC754B6D20E5C88500302A58 /* Project object */;
+}
