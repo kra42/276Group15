@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6370D0A2BFBA88F044FEB450 /* Pods_CropBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544522F1BEA5DB6E81A743B /* Pods_CropBook.framework */; };
+		868EBD73556965D2762897CA /* Pods_CropBookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87889E77739B6F322046B40 /* Pods_CropBookUITests.framework */; };
+		B2FAC022047BA62CFD1EB4DC /* Pods_CropBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D285FA043AB962FD55CB7 /* Pods_CropBookTests.framework */; };
 		FC53835620E883EF009651E7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53835520E883EF009651E7 /* Notifications.swift */; };
+		FC53835820E8BAB6009651E7 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53835720E8BAB6009651E7 /* Coefficients.swift */; };
+		FC53835B20E8BAC5009651E7 /* CropInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53835920E8BAC5009651E7 /* CropInfo.swift */; };
+		FC53835C20E8BAC5009651E7 /* CropLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53835A20E8BAC5009651E7 /* CropLibrary.swift */; };
 		FC754B7920E5C88500302A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B7820E5C88500302A58 /* AppDelegate.swift */; };
 		FC754B7B20E5C88500302A58 /* MyGardenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B7A20E5C88500302A58 /* MyGardenController.swift */; };
 		FC754B7D20E5C88500302A58 /* CropLibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B7C20E5C88500302A58 /* CropLibraryController.swift */; };
@@ -16,6 +22,8 @@
 		FC754B8520E5C88600302A58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC754B8320E5C88600302A58 /* LaunchScreen.storyboard */; };
 		FC754B9020E5C88600302A58 /* CropBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B8F20E5C88600302A58 /* CropBookTests.swift */; };
 		FC754B9B20E5C88600302A58 /* CropBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B9A20E5C88600302A58 /* CropBookUITests.swift */; };
+		FCB0943F20E94855005F060A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0943E20E94855005F060A /* Weather.swift */; };
+		FCB0944320E96002005F060A /* GardenShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0944220E96002005F060A /* GardenShareController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0266DAAC2B8EAE7693BFA45B /* Pods-CropBookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropBookUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CropBookUITests/Pods-CropBookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4717E7E0CDE005833FEBD535 /* Pods-CropBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CropBook/Pods-CropBook.debug.xcconfig"; sourceTree = "<group>"; };
+		5C6C4277DB58FD14A5949477 /* Pods-CropBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropBookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CropBookTests/Pods-CropBookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		69055525CC2D6B3D523DA96E /* Pods-CropBookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropBookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CropBookUITests/Pods-CropBookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8692812832D2EB3E42968DF7 /* Pods-CropBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropBookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CropBookTests/Pods-CropBookTests.release.xcconfig"; sourceTree = "<group>"; };
+		9544522F1BEA5DB6E81A743B /* Pods_CropBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CropBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C87889E77739B6F322046B40 /* Pods_CropBookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CropBookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45D285FA043AB962FD55CB7 /* Pods_CropBookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CropBookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E513E6614B3CC2A825BD9BF8 /* Pods-CropBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-CropBook/Pods-CropBook.release.xcconfig"; sourceTree = "<group>"; };
 		FC53835520E883EF009651E7 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		FC53835720E8BAB6009651E7 /* Coefficients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coefficients.swift; sourceTree = "<group>"; };
+		FC53835920E8BAC5009651E7 /* CropInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropInfo.swift; sourceTree = "<group>"; };
+		FC53835A20E8BAC5009651E7 /* CropLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropLibrary.swift; sourceTree = "<group>"; };
 		FC754B7520E5C88500302A58 /* CropBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC754B7820E5C88500302A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC754B7A20E5C88500302A58 /* MyGardenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGardenController.swift; sourceTree = "<group>"; };
@@ -51,6 +71,8 @@
 		FC754B9620E5C88600302A58 /* CropBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CropBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC754B9A20E5C88600302A58 /* CropBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropBookUITests.swift; sourceTree = "<group>"; };
 		FC754B9C20E5C88600302A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCB0943E20E94855005F060A /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		FCB0944220E96002005F060A /* GardenShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenShareController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6370D0A2BFBA88F044FEB450 /* Pods_CropBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FAC022047BA62CFD1EB4DC /* Pods_CropBookTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +96,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				868EBD73556965D2762897CA /* Pods_CropBookUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09D2B92E2C8C6A7612C8A241 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9544522F1BEA5DB6E81A743B /* Pods_CropBook.framework */,
+				D45D285FA043AB962FD55CB7 /* Pods_CropBookTests.framework */,
+				C87889E77739B6F322046B40 /* Pods_CropBookUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC01E51F93C6EE031BF8D2AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4717E7E0CDE005833FEBD535 /* Pods-CropBook.debug.xcconfig */,
+				E513E6614B3CC2A825BD9BF8 /* Pods-CropBook.release.xcconfig */,
+				5C6C4277DB58FD14A5949477 /* Pods-CropBookTests.debug.xcconfig */,
+				8692812832D2EB3E42968DF7 /* Pods-CropBookTests.release.xcconfig */,
+				69055525CC2D6B3D523DA96E /* Pods-CropBookUITests.debug.xcconfig */,
+				0266DAAC2B8EAE7693BFA45B /* Pods-CropBookUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FC754B6C20E5C88500302A58 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +134,8 @@
 				FC754B9920E5C88600302A58 /* CropBookUITests */,
 				FC754B9C20E5C88600302A58 /* Info.plist */,
 				FC754B7620E5C88500302A58 /* Products */,
+				AC01E51F93C6EE031BF8D2AD /* Pods */,
+				09D2B92E2C8C6A7612C8A241 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +155,11 @@
 				FC754B7820E5C88500302A58 /* AppDelegate.swift */,
 				FC754B7A20E5C88500302A58 /* MyGardenController.swift */,
 				FC754B7C20E5C88500302A58 /* CropLibraryController.swift */,
+				FCB0944220E96002005F060A /* GardenShareController.swift */,
+				FC53835920E8BAC5009651E7 /* CropInfo.swift */,
+				FC53835A20E8BAC5009651E7 /* CropLibrary.swift */,
+				FC53835720E8BAB6009651E7 /* Coefficients.swift */,
+				FCB0943E20E94855005F060A /* Weather.swift */,
 				FC53835520E883EF009651E7 /* Notifications.swift */,
 				FC754B7E20E5C88500302A58 /* Main.storyboard */,
 				FC754B8120E5C88600302A58 /* Assets.xcassets */,
@@ -138,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC754B9F20E5C88600302A58 /* Build configuration list for PBXNativeTarget "CropBook" */;
 			buildPhases = (
+				DB2A9CD97B2C23D031E5B0B3 /* [CP] Check Pods Manifest.lock */,
 				FC754B7120E5C88500302A58 /* Sources */,
 				FC754B7220E5C88500302A58 /* Frameworks */,
 				FC754B7320E5C88500302A58 /* Resources */,
+				BDCEEF44992421A900B140C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC754BA220E5C88600302A58 /* Build configuration list for PBXNativeTarget "CropBookTests" */;
 			buildPhases = (
+				28B2ABE1461286B2D696D775 /* [CP] Check Pods Manifest.lock */,
 				FC754B8720E5C88600302A58 /* Sources */,
 				FC754B8820E5C88600302A58 /* Frameworks */,
 				FC754B8920E5C88600302A58 /* Resources */,
@@ -173,6 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC754BA520E5C88600302A58 /* Build configuration list for PBXNativeTarget "CropBookUITests" */;
 			buildPhases = (
+				715ECFD22289EE287D58574C /* [CP] Check Pods Manifest.lock */,
 				FC754B9220E5C88600302A58 /* Sources */,
 				FC754B9320E5C88600302A58 /* Frameworks */,
 				FC754B9420E5C88600302A58 /* Resources */,
@@ -257,13 +316,103 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28B2ABE1461286B2D696D775 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CropBookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		715ECFD22289EE287D58574C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CropBookUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDCEEF44992421A900B140C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CropBook/Pods-CropBook-frameworks.sh",
+				"${PODS_ROOT}/AerisWeather/lib/AerisCore.framework",
+				"${PODS_ROOT}/AerisWeather/lib/AerisCore.framework.dSYM",
+				"${PODS_ROOT}/AerisWeather/lib/AerisCoreUI.framework",
+				"${PODS_ROOT}/AerisWeather/lib/AerisCoreUI.framework.dSYM",
+				"${PODS_ROOT}/AerisWeather/lib/AerisWeatherKit.framework",
+				"${PODS_ROOT}/AerisWeather/lib/AerisWeatherKit.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AerisCore.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/AerisCore.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AerisCoreUI.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/AerisCoreUI.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AerisWeatherKit.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/AerisWeatherKit.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CropBook/Pods-CropBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB2A9CD97B2C23D031E5B0B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CropBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC754B7120E5C88500302A58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB0943F20E94855005F060A /* Weather.swift in Sources */,
+				FC53835820E8BAB6009651E7 /* Coefficients.swift in Sources */,
 				FC53835620E883EF009651E7 /* Notifications.swift in Sources */,
+				FC53835C20E8BAC5009651E7 /* CropLibrary.swift in Sources */,
 				FC754B7D20E5C88500302A58 /* CropLibraryController.swift in Sources */,
+				FC53835B20E8BAC5009651E7 /* CropInfo.swift in Sources */,
+				FCB0944320E96002005F060A /* GardenShareController.swift in Sources */,
 				FC754B7920E5C88500302A58 /* AppDelegate.swift in Sources */,
 				FC754B7B20E5C88500302A58 /* MyGardenController.swift in Sources */,
 			);
@@ -436,6 +585,7 @@
 		};
 		FC754BA020E5C88600302A58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4717E7E0CDE005833FEBD535 /* Pods-CropBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -444,7 +594,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CropBook.CropBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CropBook.CropBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,6 +603,7 @@
 		};
 		FC754BA120E5C88600302A58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E513E6614B3CC2A825BD9BF8 /* Pods-CropBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -461,7 +612,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CropBook.CropBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CropBook.CropBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,6 +621,7 @@
 		};
 		FC754BA320E5C88600302A58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C6C4277DB58FD14A5949477 /* Pods-CropBookTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +642,7 @@
 		};
 		FC754BA420E5C88600302A58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8692812832D2EB3E42968DF7 /* Pods-CropBookTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +663,7 @@
 		};
 		FC754BA620E5C88600302A58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69055525CC2D6B3D523DA96E /* Pods-CropBookUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -529,6 +683,7 @@
 		};
 		FC754BA720E5C88600302A58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0266DAAC2B8EAE7693BFA45B /* Pods-CropBookUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -11,9 +11,26 @@ import UserNotifications
 
 class Notifications: NSObject {
     
+    var hour : Int = 0;
+    var minute : Int = 0;
+    // Weekdays are Sunday=1 ... Saturday=7
+    var weekDay : Int = 1;
+    
+    
+    func setHour(Hour : Int) {
+        self.hour = Hour
+    }
+    
+    func setMinute(Minute : Int) {
+        self.minute = Minute
+    }
+    
+    func setWeekDay(Day:Int){
+        self.weekDay = Day
+    }
     
     func Schedule() {
-        //iOS 10 or above version
+        //iOS 10 or above
         let center = UNUserNotificationCenter.current()
         let content = UNMutableNotificationContent()
         
@@ -24,28 +41,23 @@ class Notifications: NSObject {
         
         // Set specific time and data here
         var dateComponents = DateComponents()
-        dateComponents.hour = Calendar.current.component(.hour, from: Date())
-        print(Calendar.current.component(.hour, from: Date()))
-        let b = Calendar.current.component(.minute, from: Date())
-        dateComponents.minute = b
-        print(Calendar.current.component(.minute, from: Date()))
+        dateComponents.hour = self.hour
+        dateComponents.minute = self.minute
+        dateComponents.weekday = self.weekDay
+        // Initialise trigger for specfic time and date
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
-        // Set trigger for specfic time and date
-        //let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        
-        
-        // Sets trigger for 5 seconds for test
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        // Sets trigger for 5 seconds to test
+        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         // Make Request
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        // Schedule Request
         center.add(request)
     }
     
-    
     func RequestPermission(){
-        print("Verifying Permission")
-        
+        print("Verifying Notification Permission")
         let center = UNUserNotificationCenter.current()
         let options: UNAuthorizationOptions = [.alert, .sound];
         center.requestAuthorization(options: options) {

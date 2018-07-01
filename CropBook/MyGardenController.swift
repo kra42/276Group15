@@ -15,6 +15,8 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         print("Page 1 Loaded")
         let notification = Notifications()
+
+
         notification.RequestPermission()
     }
 

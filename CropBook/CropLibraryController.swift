@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import "Notifications.swift"
 
 class SecondViewController: UIViewController {
 
@@ -16,8 +15,11 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         print("Page 2 Loaded")
         
-        // Used this to test notification
+        // Used this to test notification -- should give notification after 1 minute
         let notification = Notifications()
+        notification.setHour(Hour : Calendar.current.component(.hour, from: Date()))
+        notification.setMinute(Minute : Calendar.current.component(.minute, from: Date())+1)
+        notification.setWeekDay(Day: 1)
         notification.Schedule()
         
 
@@ -27,8 +29,6 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
 

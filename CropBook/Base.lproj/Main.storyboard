@@ -87,7 +87,7 @@
         <!--Share-->
         <scene sceneID="LSP-9C-Fcj">
             <objects>
-                <viewController id="QLS-NA-WsD" sceneMemberID="viewController">
+                <viewController id="QLS-NA-WsD" customClass="GardenShareController" customModule="CropBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9s-8f-Hqi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

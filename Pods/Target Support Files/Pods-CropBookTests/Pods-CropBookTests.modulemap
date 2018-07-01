@@ -1,0 +1,6 @@
+framework module Pods_CropBookTests {
+  umbrella header "Pods-CropBookTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

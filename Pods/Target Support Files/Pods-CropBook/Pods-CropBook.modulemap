@@ -1,0 +1,6 @@
+framework module Pods_CropBook {
+  umbrella header "Pods-CropBook-umbrella.h"
+
+  export *
+  module * { export * }
+}
