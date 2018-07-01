@@ -41,11 +41,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MyGarden" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="MyGarden" image="icons8-watermelon-50" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="-915"/>
+            <point key="canvasLocation" x="998" y="-737"/>
         </scene>
         <!--Library-->
         <scene sceneID="wg7-f3-ORb">
@@ -78,11 +78,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Library" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Library" image="icons8-literature-50" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999" y="-181"/>
+            <point key="canvasLocation" x="998" y="-71"/>
         </scene>
         <!--Share-->
         <scene sceneID="LSP-9C-Fcj">
@@ -94,11 +94,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="480-4z-vtn"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Share" image="first" id="df0-ev-6tG"/>
+                    <tabBarItem key="tabBarItem" title="Share" image="icons8-world-map-50" id="df0-ev-6tG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqn-xz-3Zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999" y="504"/>
+            <point key="canvasLocation" x="998" y="600"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -107,7 +107,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.60167410714285718" green="0.58827159831953435" blue="0.59340447025739351" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.64856292924567116" green="0.80455695433937824" blue="0.3843892983191306" alpha="0.73539282570422537" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -121,7 +123,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="icons8-literature-50" width="25" height="25"/>
+        <image name="icons8-watermelon-50" width="25" height="25"/>
+        <image name="icons8-world-map-50" width="25" height="25"/>
     </resources>
 </document>

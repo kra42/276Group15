@@ -82,6 +82,7 @@
 				FC754B7720E5C88500302A58 /* CropBook */,
 				FC754B8E20E5C88600302A58 /* CropBookTests */,
 				FC754B9920E5C88600302A58 /* CropBookUITests */,
+				FC754B9C20E5C88600302A58 /* Info.plist */,
 				FC754B7620E5C88500302A58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				FC754B9A20E5C88600302A58 /* CropBookUITests.swift */,
-				FC754B9C20E5C88600302A58 /* Info.plist */,
 			);
 			path = CropBookUITests;
 			sourceTree = "<group>";
