@@ -7,12 +7,20 @@
 //
 
 import UIKit
+//import "Notifications.swift"
 
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("Page 2 Loaded")
+        
+        // Used this to test notification
+        let notification = Notifications()
+        notification.Schedule()
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +30,5 @@ class SecondViewController: UIViewController {
 
 
 }
+
 

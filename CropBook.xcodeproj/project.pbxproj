@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC53835620E883EF009651E7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53835520E883EF009651E7 /* Notifications.swift */; };
 		FC754B7920E5C88500302A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B7820E5C88500302A58 /* AppDelegate.swift */; };
 		FC754B7B20E5C88500302A58 /* MyGardenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B7A20E5C88500302A58 /* MyGardenController.swift */; };
 		FC754B7D20E5C88500302A58 /* CropLibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B7C20E5C88500302A58 /* CropLibraryController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC53835520E883EF009651E7 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		FC754B7520E5C88500302A58 /* CropBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC754B7820E5C88500302A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC754B7A20E5C88500302A58 /* MyGardenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGardenController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				FC754B7820E5C88500302A58 /* AppDelegate.swift */,
 				FC754B7A20E5C88500302A58 /* MyGardenController.swift */,
 				FC754B7C20E5C88500302A58 /* CropLibraryController.swift */,
+				FC53835520E883EF009651E7 /* Notifications.swift */,
 				FC754B7E20E5C88500302A58 /* Main.storyboard */,
 				FC754B8120E5C88600302A58 /* Assets.xcassets */,
 				FC754B8320E5C88600302A58 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC53835620E883EF009651E7 /* Notifications.swift in Sources */,
 				FC754B7D20E5C88500302A58 /* CropLibraryController.swift in Sources */,
 				FC754B7920E5C88500302A58 /* AppDelegate.swift in Sources */,
 				FC754B7B20E5C88500302A58 /* MyGardenController.swift in Sources */,
