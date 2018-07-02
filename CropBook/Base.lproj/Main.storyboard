@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="1936.8" y="-1436.1319340329835"/>
         </scene>
-        <!--My Garden Controller-->
+        <!--Gardens-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="MyGardenController" customModule="CropBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -142,64 +142,109 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gSp-sg-Fbn"/>
+                    <navigationItem key="navigationItem" title="Gardens" id="gSp-sg-Fbn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1936.8" y="-737.18140929535241"/>
         </scene>
-        <!--Library-->
+        <!--Crop Library-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="CropBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Crop Library" id="8rJ-Kc-sve" customClass="CropLibraryController" customModule="CropBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="87" y="312" width="201.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ao-Iu-Kwr">
+                                <rect key="frame" x="46" y="309" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="By Category"/>
+                                <connections>
+                                    <segue destination="ur7-My-xsH" kind="show" id="LIg-Bn-yYk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVG-EE-J8b">
+                                <rect key="frame" x="256" y="309" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="By Name"/>
+                                <connections>
+                                    <segue destination="nd9-Ox-Tte" kind="show" id="iLA-g9-I1f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Library" image="icons8-literature-50" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" title="Crop Library" id="82W-YS-nJR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="-71"/>
+            <point key="canvasLocation" x="1937" y="-58"/>
+        </scene>
+        <!--Categories-->
+        <scene sceneID="rcD-Oc-ZVe">
+            <objects>
+                <viewController title="Categories" id="ur7-My-xsH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6El-Ic-wKp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rwl-lX-ncZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjH-mD-Sae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3060" y="-53"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="fKM-ms-av6">
+            <objects>
+                <viewController title="Search" id="nd9-Ox-Tte" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QL8-Mp-Ecm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rTk-2E-IV5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KrW-Lx-fj4"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="q0B-k3-NaN" id="7S8-KY-mSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ruW-h9-xnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="q0B-k3-NaN">
+                    <connections>
+                        <outlet property="delegate" destination="nd9-Ox-Tte" id="oSE-tW-Ni0"/>
+                        <outlet property="searchContentsController" destination="nd9-Ox-Tte" id="VYO-SZ-uwf"/>
+                        <outlet property="searchResultsDataSource" destination="nd9-Ox-Tte" id="vpX-c1-PyA"/>
+                        <outlet property="searchResultsDelegate" destination="nd9-Ox-Tte" id="CGH-Oj-shv"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="3060" y="699"/>
         </scene>
         <!--Share-->
         <scene sceneID="LSP-9C-Fcj">
             <objects>
-                <viewController id="QLS-NA-WsD" sceneMemberID="viewController">
+                <viewController id="QLS-NA-WsD" customClass="GardenShareController" customModule="CropBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9s-8f-Hqi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="480-4z-vtn"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Share" image="icons8-world-map-50" id="df0-ev-6tG"/>
+                    <tabBarItem key="tabBarItem" title="Share" image="icons8-world-map-50" selectedImage="icons8-world-map-50" id="df0-ev-6tG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqn-xz-3Zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="600"/>
+            <point key="canvasLocation" x="641" y="699"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -214,7 +259,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="HGE-yg-Eup" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Cpp-Ji-enC" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="QLS-NA-WsD" kind="relationship" relationship="viewControllers" id="XMt-Xv-T9a"/>
                     </connections>
                 </tabBarController>
@@ -318,6 +363,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dal-bY-561" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2676" y="-1436"/>
+        </scene>
+        <!--Library-->
+        <scene sceneID="9lv-lK-iqT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cpp-Ji-enC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Library" image="icons8-literature-50" selectedImage="icons8-literature-50" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dKB-Lv-Qkc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="ePi-Z7-ZU2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQ0-wa-cfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.60000000000002" y="-71.514242878560722"/>
         </scene>
     </scenes>
     <resources>

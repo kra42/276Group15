@@ -3,7 +3,6 @@
 import UIKit
 
 
-
 class CropProfile
 {
 //varaibles for crop attributes
@@ -48,11 +47,5 @@ class CropProfile
     
 }
 
-
-var MyCrop = CropProfile(cropid: 12, cropName: "Carrot", cropType: "root", wateringVariable: 0.78)
-print(MyCrop.GetCropid())
-print(MyCrop.GetCropName())
-print(MyCrop.GetCropType())
-print(MyCrop.GetWateringVariable())
 
 

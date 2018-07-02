@@ -17,7 +17,8 @@ class GardenShareController: UIViewController {
         
         //Test the weather class
         let weather = Weather()
-        weather.CheckWeather()
+        weather.UpdateWaterRequirements(coEfficient: 0.4)
+        print(weather.GetWaterRequirements())
     }
     
     override func didReceiveMemoryWarning() {

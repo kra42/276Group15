@@ -1,0 +1,236 @@
+[
+    {
+        "cropName": "Asparagus",
+        "coEfficients": {
+            "init": 0.3,
+            "mid": 0.95,
+            "end": 0.3
+        },
+        "Type": "Vegetable",
+        "Image": "Asparagus.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Sandy",
+        "soilpH": "Slightly Acidic to Neutral"
+    },
+    {
+        "cropName": "Beets",
+        "coEfficients": {
+            "init": 0.5,
+            "mid": 1.05,
+            "end": 0.95
+        },
+        "Type": "Vegetable",
+        "Image": "Beets.jpeg",
+        "sunExposure": "Full Sun, Part Sun",
+        "soilType": "Loamy, Sandy",
+        "soilpH": "Neutral"
+    },
+    {
+        "cropName": "Blueberries",
+        "coEfficients": {
+            "init": 0.4,
+            "mid": 1.0,
+            "end": 0.75
+        },
+        "Type": "Fruit",
+        "Image": "Blueberries.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Any",
+        "soilpH": "Acidic"
+    },
+    {
+        "cropName": "Broccoli",
+        "coEfficients": {
+            "init": 0.7,
+            "mid": 1.05,
+            "end": 0.95
+        },
+        "Type": "Vegetable",
+        "Image": "Broccoli.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Sandy",
+        "soilpH": "Slightly Acidic to Neutral"
+    },
+    {
+        "cropName": "Cabbage",
+        "coEfficients": {
+            "init": 0.7,
+            "mid": 1.05,
+            "end": 0.95
+        },
+        "Type": "Vegetable",
+        "Image": "Cabbage.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Loamy, Sandy",
+        "soilpH": "Neutral"
+    },
+    {
+        "cropName": "Carrots",
+        "coEfficients": {
+            "init": 0.7,
+            "mid": 1.05,
+            "end": 0.95
+        },
+        "Type": "Vegetable",
+        "Image": "Carrots.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Sandy",
+        "soilpH": "Neutral"
+    },
+    {
+        "cropName": "Cauliflower",
+        "coEfficients": {
+            "init": 0.7,
+            "mid": 1.05,
+            "end": 0.95
+        },
+        "Type": "Vegetable",
+        "Image": "Cauliflower.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Loamy",
+        "soilpH": "Slightly Acidic to Neutral"
+    },
+    {
+        "cropName": "Celery",
+        "coEfficients": {
+            "init": 0.7,
+            "mid": 1.05,
+            "end": 0.95
+        },
+        "Type": "Vegetable",
+        "Image": "Celery.jpeg",
+        "sunExposure": "Full Sun, Part Sun",
+        "soilType": "Any",
+        "soilpH": "Neutral"
+    },
+    {
+        "cropName": "Corn",
+        "coEfficients": {
+            "init": 0.3,
+            "mid": 1.15,
+            "end": 0.4
+        },
+        "Type": "Vegetable",
+        "Image": "Corn.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Loamy",
+        "soilpH": "Neutral"
+    },
+    {
+        "cropName": "Cucumber",
+        "coEfficients": {
+            "init": 0.6,
+            "mid": 1,
+            "end": 0.75
+        },
+        "Type": "Vegetable",
+        "Image": "Cucumber.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Loamy",
+        "soilpH": "Neutral"
+    },
+    {
+        "cropName": "Green onions",
+        "coEfficients": {
+            "init": 0.7,
+            "mid": 1.05,
+            "end": 0.95
+        },
+        "Type": "Vegetable",
+        "Image": "Green onions.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Loamy, Sandy",
+        "soilpH": ""
+    },
+    {
+        "cropName": "Lettuce",
+        "coEfficients": {
+            "init": 0.7,
+            "mid": 1,
+            "end": 0.95
+        },
+        "Type": "Vegetable",
+        "Image": "Lettuce.jpeg",
+        "sunExposure": "Part Sun",
+        "soilType": "Loamy",
+        "soilpH": ""
+    },
+    {
+        "cropName": "Onions",
+        "coEfficients": {
+            "init": 0.7,
+            "mid": 1.05,
+            "end": 0.95
+        },
+        "Type": "Vegetable",
+        "Image": "Onions.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Any, Loamy",
+        "soilpH": "Neutral"
+    },
+    {
+        "cropName": "Peas",
+        "coEfficients": {
+            "init": 0.5,
+            "mid": 1.15,
+            "end": 1.1
+        },
+        "Type": "Vegetable",
+        "Image": "Peas.jpeg",
+        "sunExposure": "Full Sun, Part Sun",
+        "soilType": "Loamy",
+        "soilpH": "Neutral"
+    },
+    {
+        "cropName": "Potato",
+        "coEfficients": {
+            "init": 0.5,
+            "mid": 1.15,
+            "end": 0.75
+        },
+        "Type": "Vegetable",
+        "Image": "Potato.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Sandy",
+        "soilpH": "Acidic"
+    },
+    {
+        "cropName": "Raspberries",
+        "coEfficients": {
+            "init": 0.4,
+            "mid": 1.2,
+            "end": 0.75
+        },
+        "Type": "Fruit",
+        "Image": "Raspberries.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Any",
+        "soilpH": "Slightly Acidic to Neutral"
+    },
+    {
+        "cropName": "Strawberries",
+        "coEfficients": {
+            "init": 0.4,
+            "mid": 1.05,
+            "end": 0.7
+        },
+        "Type": "Fruit",
+        "Image": "Strawberries.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Loamy",
+        "soilpH": "Slightly Acidic to Neutral"
+    },
+    {
+        "cropName": "Watermelon",
+        "coEfficients": {
+            "init": 0.4,
+            "mid": 1,
+            "end": 0.75
+        },
+        "Type": "Fruit",
+        "Image": "Watermelon.jpeg",
+        "sunExposure": "Full Sun",
+        "soilType": "Sandy",
+        "soilpH": ""
+    }
+]

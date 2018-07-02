@@ -24,7 +24,7 @@ class GardenInterface: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        print(GardenList[0].gardenName)
+        //print(GardenList[0].gardenName)
             
         }
     }
