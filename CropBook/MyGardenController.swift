@@ -8,6 +8,7 @@
 
 import UIKit
 
+var GardenList=[MyGarden?]()
 class MyGardenController: UIViewController {
 
     override func viewDidLoad() {

@@ -27,9 +27,9 @@ class GardenSetupController: UIViewController {
     @IBAction func CreateGarden(_ sender: Any) {
         if let garden=NameTF.text,
             let address=AddressTF.text{
-    //  let newGarden=MyGarden(Name:garden, Address:address)
-          //  let Controller=EmptyGardenController()
-            //GardenList.append(newGarden)
+      let newGarden=MyGarden(Name:garden, Address:address)
+            
+            GardenList.append(newGarden)
             
         }
     }
