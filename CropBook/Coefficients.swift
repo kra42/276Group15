@@ -9,32 +9,39 @@
 import Foundation
 
 class Coefficients{
-    var initial : Double
-    var mid : Double
-    var end : Double
+    var initial : Float
+    var mid : Float
+    var end : Float
     
-    init(initial:Double,mid:Double,end:Double) {
+    init(initial:Float,mid:Float,end:Float) {
         self.initial = initial
         self.mid = mid
         self.end = end
     }
     
     init(json:[String:Double]){
-        self.initial = json["init"] ?? 0
-        self.mid = json["mid"] ?? 0
-        self.end = json["end"] ?? 0
+        self.initial = Float(json["init"] ?? 0)
+        self.mid = Float(json["mid"] ?? 0)
+        self.end = Float(json["end"] ?? 0)
     }
     
-    func getInitial() -> Double{
+    func getInitial() -> Float{
         return initial
     }
     
-    func getMid() -> Double{
+    func getMid() -> Float{
         return mid
     }
     
-    func getEnd() -> Double{
+    func getEnd() -> Float{
         return end
+    }
+    
+    func getString() -> String{
+        let str1 = "Initial Growth: " + String(initial)
+        let str2 = str1 + " Mid Growth: " + String(mid)
+        let str3 = str2 + " End Growth: " + String(end)
+        return str3
     }
     
     func printData(){

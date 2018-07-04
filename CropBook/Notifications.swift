@@ -15,7 +15,7 @@ class Notifications: NSObject {
     var minute : Int = 0;
     // Weekdays are Sunday=1 ... Saturday=7
     var weekDay : Int = 1;
-    
+    var second : Int = 0;
     
     func setHour(Hour : Int) {
         self.hour = Hour
@@ -28,14 +28,16 @@ class Notifications: NSObject {
     func setWeekDay(Day:Int){
         self.weekDay = Day
     }
-    
-    func Schedule() {
+    func setSeconds(Second : Int){
+        self.second = Second
+    }
+    func Schedule(msg : String) {
         //iOS 10 or above
         let center = UNUserNotificationCenter.current()
         let content = UNMutableNotificationContent()
         
         content.title = "Watering Time!"
-        content.body = "Time to water your crops!"
+        content.body = msg
         content.categoryIdentifier = "alarm"
         content.sound = UNNotificationSound.default()
         
@@ -45,10 +47,9 @@ class Notifications: NSObject {
         dateComponents.minute = self.minute
         dateComponents.weekday = self.weekDay
         // Initialise trigger for specfic time and date
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        
+        //let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         // Sets trigger for 5 seconds to test
-        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         // Make Request
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
