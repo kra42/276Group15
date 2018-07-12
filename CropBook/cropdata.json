@@ -1,5 +1,46 @@
  [
   {
+  "cropName": "Apples",
+  "coEfficients": {
+  "init": 0.70,
+  "mid": 1.00,
+  "end": 0.75
+  },
+  "Type": "Fruit",
+  "Image": "Apples.jpeg”,
+  "sunExposure": "Sun/Partial Shade",
+  "soilType": "Any",
+  "soilpH": "Slightly acidic/Neutral",
+  "plant" : "Plant in mid-fall or early winter when it's not too cold for a little root growth to help them establish. Should be planted with at least one other apple tree which flowers at a similar time to aid pollination.",
+  "feeding" : "Not required",
+  "spacing" : "Single Plants: 5.00m each way (minimum)
+  "Rows: (5.00m) with (5.00m) row gap (minimum)",
+  "notes" : "Prune towards the end of the season to remove any dead or overcrowded branches and to shape if required.
+
+",
+  "harvesting" : "Harvest when ripe (70% red in color)"
+  },
+
+  {
+  "cropName": "Artichokes",
+  "coEfficients": {
+  "init": 0.5,
+  "mid": 1.00,
+  "end": 0.80
+  },
+  "Type": "Vegetable",
+  "Image": "Artichokes.jpeg”,
+  "sunExposure": "Full Sun",
+  "soilType": "Loamy, Sandy",
+  "soilpH": "Neutral",
+  "plant" : "Sow in spring is colder regions; sow in fall in warm subtropical regions. May wish to start 8 weeks indoors",
+  "feeding" : "Keep well fed with liquid feed through midsummer. Feed less when plants begin to produce buds.",
+  "spacing" : "Single Plants: (90cm) each way (minimum) Rows:  (90cm) with (90cm) row gap (minimum)",
+  "notes" : "Need plenty of water, so mulch generously to keep the soil cool and moist.",
+  "harvesting" : "Use a sharp knife to cut the heads (flower buds) with 2 inches of stem attached while they are still closed or justly slightly opening."
+  },
+
+  {
   "cropName": "Asparagus",
   "coEfficients": {
   "init": 0.3,
@@ -8,7 +49,7 @@
   },
   "Type": "Vegetable",
   "Image": "Asparagus.jpeg",
-  "sunExposure": "Full Sun",
+  "sunExposure": "Full Sun/Part Shade",
   "soilType": "Sandy, Fertile, well drained, and free of persistent weeds",
   "soilpH": "Slightly Acidic to Neutral",
   "plant" : "Set out dormant 1-year old roots, called crowns, in late winter or early spring. A few varieties can be grown from seed.",
@@ -76,6 +117,23 @@
   "harvesting" : "Use a sharp knife to harvest the primary head when the beads are plump and well-filled. Many varieties produce numerous smaller side shoots after the primary head is cut."
   },
   
+  "cropName": "Brussel Sprouts",
+  "coEfficients": {
+  "init": 0.7,
+  "mid": 1.05,
+  "end": 0.95
+  },
+  "Type": "Vegetable",
+  "Image": "BrusselSprouts.jpeg",
+  "sunExposure": "Full Sun",
+  "soilType": "Fertile, well-drained",
+  "soilpH": "Neutral",
+  "plant" : "Plant in early spring, or mid-to late summer, matures in the fall",
+  "feeding" : "Add boron to the soil by dissolving 1 level tablespoon of borax in 5 quarts of water and sprinkling it evenly over 50 square feet of bed",
+  "spacing" : "Single Plants: (20cm) each way (minimum) Rows: (20cm) with (30cm) row gap (minimum)",
+  "notes" : "Full-grown sprouts stays intact on the plant in cold weather, making them a great winter harvest item",
+  "harvesting" : "Remove sprouts by twisting them until they break away from the plant."
+  },
   {
   "cropName": "Cabbage",
   "coEfficients": {
