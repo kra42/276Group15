@@ -9,103 +9,67 @@
 import UIKit
 import Firebase
 var GardenList=[MyGarden?]()
-class GardenInterface: UIViewController {
-
-    @IBOutlet weak var garden1Button: UIButton!
-    @IBOutlet weak var delete2: UIButton!
-    @IBOutlet weak var delete1: UIButton!
-    @IBOutlet weak var garden2Button: UIButton!
-    @IBOutlet weak var delete3: UIButton!
-    @IBOutlet weak var garden3Button: UIButton!
+class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return GardenList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gardenCell", for:indexPath) as! GardenTableViewCell
+        cell.gardenImage.image = UIImage(named: "gardenImageBlank.png")
+        cell.gardenLabel.text = GardenList[indexPath.row]?.gardenName ?? "MyGarden"
+        cell.deleteButton.addTarget(self, action: #selector(GardenInterface.deleteGarden), for: .touchUpInside)
+        cell.deleteButton.tag = indexPath.row
+        return (cell)
+     }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        gardenIndex = indexPath.row
+        performSegue(withIdentifier: "GardenProfile", sender: self)
+    }
+    
     @IBOutlet weak var emptyGardenLabel: UILabel!
+    @IBOutlet weak var tableView : UITableView!
     var gardenIndex:Int?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         var ref: DatabaseReference!
-
+        self.tableView.rowHeight = 120.0
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tableView.reloadData()
         if GardenList.count>0{
-            if let garden1 = GardenList[0]?.gardenName{
-                garden1Button.isHidden=false
-                emptyGardenLabel.isHidden=true
-                garden1Button.setTitle(garden1,for: .normal)
-                delete1.isHidden=false
-            }else{
-                print("Garden1 is empty")
-            }
-        }
-        
-        if GardenList.count>1{
-            if let garden2=GardenList[1]?.gardenName{
-                garden2Button.isHidden=false
-                garden2Button.setTitle(garden2,for: .normal)
-                delete2.isHidden=false
-            }else{
-                print("Garden2 is empty")
-            }
-        }
-        
-        if GardenList.count>2{
-            if let garden3=GardenList[2]?.gardenName{
-                garden3Button.isHidden=false
-                garden3Button.setTitle(garden3,for: .normal)
-                delete3.isHidden=false
-            }else{
-                print("Garden3 is empty")
-            }
+            emptyGardenLabel.isHidden=true
+        }else {
+            emptyGardenLabel.isHidden=false
         }
     }
     
-    @IBAction func Delete1(_ sender: Any) {
-        garden1Button.isHidden=true
-        delete1.isHidden=true
-        GardenList.removeFirst()
-        
+    //Delete a selected garden
+    @objc func deleteGarden(sender: UIButton){
+        let passedIndex = sender.tag
+        print("DELETE")
+        GardenList.remove(at: passedIndex)
+        self.tableView.reloadData()
     }
-    
-    
-    @IBAction func Delete2(_ sender: Any) {
-        garden2Button.isHidden=true
-        delete2.isHidden=true
-        if garden1Button.isHidden==true{
-            GardenList.removeFirst()
-        }else{
-            GardenList.remove(at: 1)
-        }
-    }
-    
-    @IBAction func Delete3(_ sender: Any) {
-        garden3Button.isHidden=true
-        delete3.isHidden=true
-        GardenList.removeLast()
-    }
-    
-    
-    @IBAction func Garden1switch(_ sender: Any) {
-        gardenIndex=0
-    }
+
 
     //Pass gardenIndex to the next viewcontroller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == nil)  {
+        if (segue.identifier == "GardenProfile")  {
             let nextController=segue.destination as!GardenCropList
             nextController.gardenIndex = gardenIndex!
         }
     }
 
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-   
-
-
 }

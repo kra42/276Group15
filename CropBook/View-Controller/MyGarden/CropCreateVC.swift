@@ -88,32 +88,18 @@ class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             createCrop.alpha = 0.5
         }
         return true
-    }
-    
-    
+    } 
     
     @IBAction func AddCrop(_ sender: Any) {
 
         print("ADDING CROP");
-        //print("{}",GardenList[gardenIndex]?.gardenName)
-        //let cropIndex = GardenList[gardenIndex]?.getSize()
-        
         profName = cropNameField.text!
         let newCropProf = CropProfile(cropInfo : mainLib[libIndex], cropName : profName)
         GardenList[gardenIndex]?.cropProfile.append(newCropProf)
-        print("1Number of Crops = {}", GardenList[gardenIndex]!.getSize())
         self.navigationController?.popViewController(animated: true)
         
     }
     
-    
-   /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextController = segue.destination as!GardenCropList
-        profName = cropNameField.text!
-        let newCropProf = CropProfile(cropInfo : mainLib[libIndex], cropName : profName)
-        nextController.addCropProf(cropProf: newCropProf)
-    }
-*/
+
 }
 
