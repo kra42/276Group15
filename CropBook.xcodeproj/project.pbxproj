@@ -14,6 +14,8 @@
 		BB44509E20EC461A00F2BC99 /* CtgysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB44509D20EC461A00F2BC99 /* CtgysVC.swift */; };
 		BB4450A020EC462300F2BC99 /* CtgyTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB44509F20EC462300F2BC99 /* CtgyTableVC.swift */; };
 		BB4450A220EC462D00F2BC99 /* CInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4450A120EC462D00F2BC99 /* CInfoVC.swift */; };
+		BB47DCA820FB2BF100EA735D /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DCA720FB2BF100EA735D /* PostVC.swift */; };
+		BB47DCAA20FB2CA000EA735D /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DCA920FB2CA000EA735D /* Posting.swift */; };
 		BBC5B55E20F9BC5000DD422E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBC5B55D20F9BC5000DD422E /* GoogleService-Info.plist */; };
 		BBC6990620F9CD0600F40BE5 /* ComposeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6990520F9CD0600F40BE5 /* ComposeVC.swift */; };
 		BF58EACE20EB39EE000F239C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF58EACC20EB39EE000F239C /* Model.xcdatamodeld */; };
@@ -70,6 +72,8 @@
 		BB44509D20EC461A00F2BC99 /* CtgysVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CtgysVC.swift; sourceTree = "<group>"; };
 		BB44509F20EC462300F2BC99 /* CtgyTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CtgyTableVC.swift; sourceTree = "<group>"; };
 		BB4450A120EC462D00F2BC99 /* CInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CInfoVC.swift; sourceTree = "<group>"; };
+		BB47DCA720FB2BF100EA735D /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		BB47DCA920FB2CA000EA735D /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 		BBC5B55D20F9BC5000DD422E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBC6990520F9CD0600F40BE5 /* ComposeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeVC.swift; sourceTree = "<group>"; };
 		BF58EACD20EB39EE000F239C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 			children = (
 				FCB0944220E96002005F060A /* GardenShareVC.swift */,
 				BBC6990520F9CD0600F40BE5 /* ComposeVC.swift */,
+				BB47DCA720FB2BF100EA735D /* PostVC.swift */,
 			);
 			path = Posting;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				FC36AB1120EAAA16006E9916 /* Weather.swift */,
 				FCB489FA20EA972900E33680 /* cropdata.json */,
 				FC53835520E883EF009651E7 /* Notifications.swift */,
+				BB47DCA920FB2CA000EA735D /* Posting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -508,6 +514,7 @@
 				FCCAAD9420FAD19E0043301A /* CropCreateVC.swift in Sources */,
 				BB44509E20EC461A00F2BC99 /* CtgysVC.swift in Sources */,
 				FC1300AB20E9F4FC0006E7E7 /* GardenListVC.swift in Sources */,
+				BB47DCA820FB2BF100EA735D /* PostVC.swift in Sources */,
 				FC53835620E883EF009651E7 /* Notifications.swift in Sources */,
 				FC1300AC20E9F4FC0006E7E7 /* GardenSetupVC.swift in Sources */,
 				FCE283B220E991F3008AF095 /* CropProfile.swift in Sources */,
@@ -520,6 +527,7 @@
 				FC53835B20E8BAC5009651E7 /* CropInfo.swift in Sources */,
 				BB4450A220EC462D00F2BC99 /* CInfoVC.swift in Sources */,
 				FCB0944320E96002005F060A /* GardenShareVC.swift in Sources */,
+				BB47DCAA20FB2CA000EA735D /* Posting.swift in Sources */,
 				FC754B7920E5C88500302A58 /* AppDelegate.swift in Sources */,
 				BF58EB1120EB6C0F000F239C /* CropProfileVC.swift in Sources */,
 				BBC6990620F9CD0600F40BE5 /* ComposeVC.swift in Sources */,

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class CropInfo{
-    
+    //test
     let cropName : String;
     let coEff : Coefficients;
     let cropType : String;
