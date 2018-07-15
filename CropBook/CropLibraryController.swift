@@ -20,7 +20,6 @@ class CropLibraryController: UIViewController {
         notification.setHour(Hour : Calendar.current.component(.hour, from: Date()))
         notification.setMinute(Minute : Calendar.current.component(.minute, from: Date())+1)
         notification.setWeekDay(Day: 1)
-        notification.Schedule()
         
 
     }

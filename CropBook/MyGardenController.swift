@@ -9,10 +9,10 @@
 import UIKit
 
 var GardenList=[MyGarden?]()
-class MyGardenController: UIViewController {
+class MyGardenController: UIViewController{
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         // Do any additional setup after loading the view, typically from a nib.
         print("Page 1 Loaded")
         let notification = Notifications()
