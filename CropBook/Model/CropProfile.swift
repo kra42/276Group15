@@ -2,8 +2,7 @@
 import UIKit
 
 
-class CropProfile
-{
+class CropProfile{
     
     //varaibles for crop attributes
     var cropName : String

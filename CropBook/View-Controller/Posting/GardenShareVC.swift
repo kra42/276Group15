@@ -15,15 +15,18 @@ class GardenShareController: UIViewController, UITableViewDelegate, UITableViewD
     var ref : DatabaseReference?
     
     @IBOutlet weak var tableView: UITableView!
-    var postData = [String]()
+    var postData = [Posting]()
+    var myIndex = 0
     override func viewDidLoad() {
         ref = Database.database().reference()
         ref?.child("Posts").observe(.childAdded, with: { (snapshot) in
                 let post = snapshot.value as? String
+                let test = snapshot.key as String
                 if let actualPost = post{
-                    self.postData.append(actualPost)
+                    let newPost = Posting(postTitle: actualPost)
+                    self.postData.append(newPost)
+                    print(test)
                 }
-            
             self.tableView.reloadData()
         })
         super.viewDidLoad()
@@ -48,7 +51,17 @@ class GardenShareController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell")
         
-        cell?.textLabel?.text = postData[indexPath.row]
+        cell?.textLabel?.text = postData[indexPath.row].getTitle()
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "postSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let receiverVC = segue.destination as! PostVC
+        receiverVC.post = postData[myIndex]
     }
 }

@@ -120,7 +120,6 @@
         <!--Gardens-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <viewController id="9pv-A4-QxB" customClass="MyGardenController" customModule="CropBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -152,6 +151,7 @@
                         <barButtonItem key="backBarButtonItem" title="Garden List" id="2wJ-Tv-m9X"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1433" y="-1863"/>
         </scene>
@@ -196,6 +196,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="LuU-yU-ZUu" id="6fN-fL-Sa9"/>
+                        <segue destination="wCF-NR-1dR" kind="show" identifier="postSegue" id="kh8-24-uRo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqn-xz-3Zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -890,8 +891,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I8q-tD-AoU">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8q-tD-AoU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="261"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -927,7 +928,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9F9-9U-GCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879" y="813"/>
+            <point key="canvasLocation" x="2316" y="772.26386806596713"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="nzx-2I-Prt">
+            <objects>
+                <viewController id="wCF-NR-1dR" customClass="PostVC" customModule="CropBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ljL-hx-IRi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1OX-3s-ba1">
+                                <rect key="frame" x="0.0" y="123" width="375" height="495"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWG-Qj-G50">
+                                        <rect key="frame" x="0.0" y="-34" width="375" height="132"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1OX-3s-ba1" firstAttribute="leading" secondItem="d0h-kc-NUK" secondAttribute="leading" id="GSf-SL-pdf"/>
+                            <constraint firstItem="1OX-3s-ba1" firstAttribute="trailing" secondItem="d0h-kc-NUK" secondAttribute="trailing" id="LdE-AQ-QG4"/>
+                            <constraint firstItem="d0h-kc-NUK" firstAttribute="bottom" secondItem="1OX-3s-ba1" secondAttribute="bottom" id="NZo-ZI-P9I"/>
+                            <constraint firstItem="1OX-3s-ba1" firstAttribute="leading" secondItem="d0h-kc-NUK" secondAttribute="leading" id="QgE-W2-2T8"/>
+                            <constraint firstItem="d0h-kc-NUK" firstAttribute="bottom" secondItem="1OX-3s-ba1" secondAttribute="bottom" id="TP9-au-rGv"/>
+                            <constraint firstItem="1OX-3s-ba1" firstAttribute="top" secondItem="d0h-kc-NUK" secondAttribute="top" constant="59" id="TTg-L3-3MT"/>
+                            <constraint firstItem="d0h-kc-NUK" firstAttribute="trailing" secondItem="1OX-3s-ba1" secondAttribute="trailing" id="b4P-sw-aOa"/>
+                            <constraint firstItem="1OX-3s-ba1" firstAttribute="bottom" secondItem="d0h-kc-NUK" secondAttribute="bottom" id="gLR-oM-6jY"/>
+                            <constraint firstItem="1OX-3s-ba1" firstAttribute="leading" secondItem="d0h-kc-NUK" secondAttribute="leading" id="gOm-bX-c79"/>
+                            <constraint firstItem="d0h-kc-NUK" firstAttribute="trailing" secondItem="1OX-3s-ba1" secondAttribute="trailing" id="lbF-Bh-uaz"/>
+                            <constraint firstItem="1OX-3s-ba1" firstAttribute="top" secondItem="d0h-kc-NUK" secondAttribute="top" id="x6I-M7-5YX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d0h-kc-NUK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Post" id="i8R-09-5aW"/>
+                    <connections>
+                        <outlet property="postTitle" destination="CWG-Qj-G50" id="Q7a-B1-W0F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUZ-BH-RHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656.8" y="1691.6041979010497"/>
         </scene>
         <!--Library-->
         <scene sceneID="vhN-fl-j6z">
@@ -1063,7 +1110,7 @@
         <image name="icons8-world-map-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xpI-mx-ptx"/>
+        <segue reference="d6f-Zu-94N"/>
         <segue reference="JzW-6c-Fw5"/>
     </inferredMetricsTieBreakers>
 </document>
