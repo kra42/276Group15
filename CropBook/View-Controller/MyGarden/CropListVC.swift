@@ -49,7 +49,6 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = GardenList[gardenIndex]?.gardenName;
-        
         print("Number of Crops = {}", GardenList[gardenIndex]!.getSize())
         self.tableView.reloadData()
         //self.refresher.endRefreshing()
@@ -70,8 +69,6 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
             let receiverVC = segue.destination as! CropCreateVC
             receiverVC.gardenIndex = gardenIndex
 
-        }else{
-            let receiverVC = segue.destination as! MyGardenController
         }
     }
 
