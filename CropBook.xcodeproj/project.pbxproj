@@ -19,6 +19,9 @@
 		BB9D6D0A20FC46B000E94FF5 /* GardenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D6D0920FC46B000E94FF5 /* GardenData.swift */; };
 		BBC5B55E20F9BC5000DD422E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBC5B55D20F9BC5000DD422E /* GoogleService-Info.plist */; };
 		BBC6990620F9CD0600F40BE5 /* ComposeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6990520F9CD0600F40BE5 /* ComposeVC.swift */; };
+		BF03A5A220FC8DAF004B58AC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03A5A120FC8DAF004B58AC /* MainVC.swift */; };
+		BF03A5A420FC8DDB004B58AC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03A5A320FC8DDB004B58AC /* LoginVC.swift */; };
+		BF03A5A620FC8DF0004B58AC /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03A5A520FC8DF0004B58AC /* SignupVC.swift */; };
 		BF58EACE20EB39EE000F239C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF58EACC20EB39EE000F239C /* Model.xcdatamodeld */; };
 		BF58EB0D20EB5194000F239C /* CropCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF58EB0C20EB5194000F239C /* CropCategoryVC.swift */; };
 		BF58EB1120EB6C0F000F239C /* CropProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF58EB1020EB6C0F000F239C /* CropProfileVC.swift */; };
@@ -78,6 +81,9 @@
 		BB9D6D0920FC46B000E94FF5 /* GardenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenData.swift; sourceTree = "<group>"; };
 		BBC5B55D20F9BC5000DD422E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBC6990520F9CD0600F40BE5 /* ComposeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeVC.swift; sourceTree = "<group>"; };
+		BF03A5A120FC8DAF004B58AC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		BF03A5A320FC8DDB004B58AC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		BF03A5A520FC8DF0004B58AC /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupVC.swift; path = "View-Controller/SignupVC.swift"; sourceTree = "<group>"; };
 		BF58EACD20EB39EE000F239C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BF58EB0C20EB5194000F239C /* CropCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropCategoryVC.swift; sourceTree = "<group>"; };
 		BF58EB1020EB6C0F000F239C /* CropProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropProfileVC.swift; sourceTree = "<group>"; };
@@ -262,6 +268,9 @@
 				FC754B8320E5C88600302A58 /* LaunchScreen.storyboard */,
 				FC754B8620E5C88600302A58 /* Info.plist */,
 				BBC5B55D20F9BC5000DD422E /* GoogleService-Info.plist */,
+				BF03A5A120FC8DAF004B58AC /* MainVC.swift */,
+				BF03A5A320FC8DDB004B58AC /* LoginVC.swift */,
+				BF03A5A520FC8DF0004B58AC /* SignupVC.swift */,
 			);
 			path = CropBook;
 			sourceTree = "<group>";
@@ -515,8 +524,10 @@
 			files = (
 				FC1300AD20E9F4FC0006E7E7 /* MyGarden.swift in Sources */,
 				FC53835820E8BAB6009651E7 /* Coefficients.swift in Sources */,
+				BF03A5A420FC8DDB004B58AC /* LoginVC.swift in Sources */,
 				BF79375020EAC4DD00A0BB86 /* CropListVC.swift in Sources */,
 				FCCAAD9420FAD19E0043301A /* CropCreateVC.swift in Sources */,
+				BF03A5A220FC8DAF004B58AC /* MainVC.swift in Sources */,
 				BB44509E20EC461A00F2BC99 /* CtgysVC.swift in Sources */,
 				FC1300AB20E9F4FC0006E7E7 /* GardenListVC.swift in Sources */,
 				BB47DCA820FB2BF100EA735D /* PostVC.swift in Sources */,
@@ -531,6 +542,7 @@
 				BF58EACE20EB39EE000F239C /* Model.xcdatamodeld in Sources */,
 				BB9D6D0A20FC46B000E94FF5 /* GardenData.swift in Sources */,
 				BF58EB0D20EB5194000F239C /* CropCategoryVC.swift in Sources */,
+				BF03A5A620FC8DF0004B58AC /* SignupVC.swift in Sources */,
 				FC53835B20E8BAC5009651E7 /* CropInfo.swift in Sources */,
 				BB4450A220EC462D00F2BC99 /* CInfoVC.swift in Sources */,
 				FCB0944320E96002005F060A /* GardenShareVC.swift in Sources */,

@@ -29,6 +29,10 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
         performSegue(withIdentifier: "GardenProfile", sender: self)
     }
     
+    @IBAction func handleLogout(_ sender: Any) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)
+    }
     @IBOutlet weak var emptyGardenLabel: UILabel!
     @IBOutlet weak var tableView : UITableView!
     var gardenIndex:Int?
@@ -39,6 +43,7 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
         var ref: DatabaseReference!
         self.tableView.rowHeight = 120.0
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
