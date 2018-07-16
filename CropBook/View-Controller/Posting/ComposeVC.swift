@@ -14,10 +14,11 @@ class ComposeVC: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     var ref : DatabaseReference?
-    
+    var gardensIds : [GardenData]?
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        
         // Do any additional setup after loading the view.
     }
 

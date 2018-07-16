@@ -16,6 +16,7 @@
 		BB4450A220EC462D00F2BC99 /* CInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4450A120EC462D00F2BC99 /* CInfoVC.swift */; };
 		BB47DCA820FB2BF100EA735D /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DCA720FB2BF100EA735D /* PostVC.swift */; };
 		BB47DCAA20FB2CA000EA735D /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DCA920FB2CA000EA735D /* Posting.swift */; };
+		BB9D6D0A20FC46B000E94FF5 /* GardenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D6D0920FC46B000E94FF5 /* GardenData.swift */; };
 		BBC5B55E20F9BC5000DD422E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBC5B55D20F9BC5000DD422E /* GoogleService-Info.plist */; };
 		BBC6990620F9CD0600F40BE5 /* ComposeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6990520F9CD0600F40BE5 /* ComposeVC.swift */; };
 		BF58EACE20EB39EE000F239C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF58EACC20EB39EE000F239C /* Model.xcdatamodeld */; };
@@ -74,6 +75,7 @@
 		BB4450A120EC462D00F2BC99 /* CInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CInfoVC.swift; sourceTree = "<group>"; };
 		BB47DCA720FB2BF100EA735D /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		BB47DCA920FB2CA000EA735D /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
+		BB9D6D0920FC46B000E94FF5 /* GardenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenData.swift; sourceTree = "<group>"; };
 		BBC5B55D20F9BC5000DD422E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBC6990520F9CD0600F40BE5 /* ComposeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeVC.swift; sourceTree = "<group>"; };
 		BF58EACD20EB39EE000F239C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				FCB489FA20EA972900E33680 /* cropdata.json */,
 				FC53835520E883EF009651E7 /* Notifications.swift */,
 				BB47DCA920FB2CA000EA735D /* Posting.swift */,
+				BB9D6D0920FC46B000E94FF5 /* GardenData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				"${PODS_ROOT}/AerisWeather/lib/AerisCoreUI.framework.dSYM",
 				"${PODS_ROOT}/AerisWeather/lib/AerisWeatherKit.framework",
 				"${PODS_ROOT}/AerisWeather/lib/AerisWeatherKit.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -474,6 +478,7 @@
 				"${DWARF_DSYM_FOLDER_PATH}/AerisCoreUI.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AerisWeatherKit.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/AerisWeatherKit.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -524,6 +529,7 @@
 				BB44509C20EC45EE00F2BC99 /* SearchVC.swift in Sources */,
 				FC36AB1220EAAA16006E9916 /* Weather.swift in Sources */,
 				BF58EACE20EB39EE000F239C /* Model.xcdatamodeld in Sources */,
+				BB9D6D0A20FC46B000E94FF5 /* GardenData.swift in Sources */,
 				BF58EB0D20EB5194000F239C /* CropCategoryVC.swift in Sources */,
 				FC53835B20E8BAC5009651E7 /* CropInfo.swift in Sources */,
 				BB4450A220EC462D00F2BC99 /* CInfoVC.swift in Sources */,

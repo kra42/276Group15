@@ -8,10 +8,7 @@
 
 import Foundation
 
-
-
 class MyGarden{
-    
     
     var gardenID:UInt32
     var cropProfile=[CropProfile]()
@@ -20,15 +17,12 @@ class MyGarden{
     var gardenUserID:String?
     var address:String?
     var dailyCompletion:Bool?
-    
+
     init(Name name:String,Address address:String) {
         self.gardenName=name
         self.address=address
         self.gardenID=arc4random_uniform(100)
-        
     }
-    
-    
     
     func AddCrop(New Crop:CropProfile)->Int{       //return position in array
         cropProfile.append(Crop)
@@ -36,7 +30,6 @@ class MyGarden{
     }
     
     func getSize()->Int{
-        
         return cropProfile.count
     }
     
@@ -60,6 +53,4 @@ class MyGarden{
     func IsOwner(){
         
     }
-    
-    
 }

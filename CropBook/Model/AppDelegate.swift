@@ -11,6 +11,8 @@ import Firebase
 import UserNotifications
 import AerisWeatherKit
 import CoreData
+//import FirebaseUI
+
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {

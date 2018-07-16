@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class PostVC: UIViewController {
 
-    var post : Posting = Posting()
-    
+    var post : GardenData = GardenData()
+    var gardenRef : DatabaseReference?
     @IBOutlet weak var postTitle: UILabel!
     
     override func viewDidLoad() {
-        postTitle.text = post.getTitle()
+        gardenRef = Database.database().reference()
+        gardenRef?.child("Gardens").child(post.gardenId).child("Crops").observe(.childAdded, with: { (gardenSnapshot) in
+            let printId = gardenSnapshot.key as? String
+            print(printId)
+        })
+        
+        postTitle.text = post.getGardenId()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
