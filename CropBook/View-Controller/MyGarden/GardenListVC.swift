@@ -11,6 +11,9 @@ import Firebase
 var GardenList=[MyGarden?]()
 class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
+    let ref=Database.database().reference()
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return GardenList.count
     }
@@ -40,11 +43,54 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var ref: DatabaseReference!
+       
         self.tableView.rowHeight = 120.0
         // Do any additional setup after loading the view.
         
+        //Create a set of gardenID belongs to user
+        var gardenSet=[String]()
+        guard let userid=Auth.auth().currentUser?.uid else{return}
+        print(userid)
+        let myGardenRef=self.ref.child("Users/\(userid)/Gardens")
+        myGardenRef.observe(.value, with: {(snap) in
+            for id in snap.children.allObjects as! [DataSnapshot]{
+                print(id.key)
+                gardenSet.append(id.key)
+            }
+            
+            
+        })
+       
+      
+        
+        //retrieve garden that the user is participating from Firebase
+        let gardenref=self.ref.child("Gardens")
+        gardenref.observe(.value, with: {(snapshot) in
+            if snapshot.childrenCount>0{
+                for garden in snapshot.children.allObjects as! [DataSnapshot]{
+                   // if gardenSet.contains(garden.key)
+                    if gardenSet.contains(garden.key)
+                    {
+                    let gardenObject=garden.value as? [String: AnyObject]
+                    let gardenname=gardenObject?["gardenName"]
+                    print(gardenname!)
+                    let address=gardenObject?["Address"]
+                    
+                    let newGarden=MyGarden(Name: gardenname as! String, Address: address as! String)
+                    GardenList.append(newGarden)
+                    }
+                }
+            }
+            
+        
+        
+        })
+    
     }
+            
+    
+        //closes first snapshot
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

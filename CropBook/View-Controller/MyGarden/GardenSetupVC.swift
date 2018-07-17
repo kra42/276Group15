@@ -10,8 +10,11 @@ import Foundation
 
 
 import UIKit
+import Firebase
 
 class GardenSetupController: UIViewController {
+    
+    let ref=Database.database().reference()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,20 @@ class GardenSetupController: UIViewController {
         if let garden=NameTF.text,let address=AddressTF.text{
             let newGarden=MyGarden(Name:garden, Address:address)
             GardenList.append(newGarden)
+            //Write Garden into Firebase
+            
+            //Assign Attribute into garden
+           let gardenID = self.ref.child("Gardens").childByAutoId().key
+            self.ref.child("Gardens/\(gardenID)/gardenName").setValue(garden)
+         //   self.ref.child("Gardens/\(gardenID)/Crops").setValue()
+            self.ref.child("Gardens/\(gardenID)/Address").setValue(address)
+            
+            //Save gardenID into the user profile
+            guard let userid=Auth.auth().currentUser?.uid else {return}
+            let gardenRef=self.ref.child("Users/\(userid)/Gardens").child(gardenID)
+            gardenRef.setValue(gardenID)
+            gardenRef.setValue(["owner?":true])
+            
             self.navigationController?.popViewController(animated: true)
         }
     }
