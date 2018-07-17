@@ -30,8 +30,7 @@ class GardenSetupController: UIViewController {
     
     @IBAction func CreateGarden(_ sender: Any) {
         if let garden=NameTF.text,let address=AddressTF.text{
-            let newGarden=MyGarden(Name:garden, Address:address)
-            GardenList.append(newGarden)
+            
             //Write Garden into Firebase
             
             //Assign Attribute into garden
