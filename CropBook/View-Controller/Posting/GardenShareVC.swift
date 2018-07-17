@@ -9,56 +9,32 @@
 import UIKit
 let weather = Weather()
 import FirebaseDatabase
+import FirebaseAuth
 
 class GardenShareController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var ref : DatabaseReference?
-    var userRef : DatabaseReference?
-    var gardensRef : DatabaseReference?
-    var gardenRef : DatabaseReference?
-    var cropsRef : DatabaseReference?
     @IBOutlet weak var tableView: UITableView!
-    var gardenIds = [GardenData]()
-    var postData = [Posting]()
+    
+    var ref : DatabaseReference?
+    var postings = [PostData]()
+    let uid = Auth.auth().currentUser?.uid
     var myIndex = 0
+    var postInfo : Posting = Posting()
+    
     override func viewDidLoad() {
         ref = Database.database().reference()
-        userRef = ref?.child("Users").child("Bob")
+        let userRef = ref?.child("Posts")
         userRef?.observe(.childAdded, with: { (gardenSnapshot) in
-            let gardenId = gardenSnapshot.key as? String
-            let userRole = gardenSnapshot.value as? String
-            let gardenData = GardenData(gardenId: gardenId!, userRole: userRole!) as? GardenData
-            self.gardenIds.append(gardenData!)
+            let postId = gardenSnapshot.key as? String
+            let postTitle = gardenSnapshot.childSnapshot(forPath: "Title").value as! String
+            let postData = PostData(postId: postId!, postTitle: postTitle) as? PostData
+            self.postings.append(postData!)
             self.tableView.reloadData()
         })
         
-        gardensRef = ref?.child("Gardens")
-        gardenRef = gardensRef?.child("Garden1")
-        cropsRef = gardenRef?.child("Crops")
-        /*
-        ref?.observe(.value, with: { (snapshot) in
-            let dataDict = snapshot.value as! [String : AnyObject]
-            print(dataDict)
-        })
-        */
-        
-        /*
-        cropsRef?.observe(.childAdded, with: { (gardenSnapshot) in
-                let post = gardenSnapshot.value as? String
-                let test = gardenSnapshot.key as? String
-                if let actualPost = test{
-                    let newPost = Posting(postTitle: actualPost)
-                    self.postData.append(newPost)
-                    print(test)
-                }
-            self.tableView.reloadData()
-        })
-        */
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         tableView.delegate = self
         tableView.dataSource = self
-        print("Page 3 Loaded")
+        super.viewDidLoad()
         
     }
     
@@ -69,29 +45,58 @@ class GardenShareController: UIViewController, UITableViewDelegate, UITableViewD
     
     //returns number of rows in data
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gardenIds.count
+        return postings.count
     }
     
     //return cell for display
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell")
         
-        cell?.textLabel?.text = gardenIds[indexPath.row].getGardenId()
+        cell?.textLabel?.text = postings[indexPath.row].getUserRole()
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
-        performSegue(withIdentifier: "postSegue", sender: self)
+        createPosting()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute:{ self.performSegue(withIdentifier: "postSegue", sender: self)})
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "postSegue"{
             let receiverVC = segue.destination as! PostVC
-            receiverVC.post = gardenIds[myIndex]
+            receiverVC.post = postInfo
         }else{
             let receiverVC = segue.destination as! ComposeVC
-            receiverVC.gardensIds = self.gardenIds
+            receiverVC.gardensIds = self.postings
         }
+    }
+    
+    func createPosting(){
+        let postRef = ref?.child("Posts/\(postings[myIndex].getGardenId())")
+        self.postInfo.setPostRef(postRef: postRef!)
+        postRef?.child("GardenId").observeSingleEvent(of: .value, with: { (snapshot) in
+            let val = snapshot.value as! String
+            self.postInfo.setGardenRef(gardenRef: val)
+        })
+        postRef?.child("Description").observeSingleEvent(of: .value, with: { (snapshot) in
+            let val = snapshot.value as! String
+            self.postInfo.setDescription(description: val)
+        })
+        postRef?.child("Title").observeSingleEvent(of: .value, with: { (snapshot) in
+            let val = snapshot.value as! String
+            self.postInfo.setTitle(title: val)
+        })
+        postRef?.child("Poster").observeSingleEvent(of: .value, with: { (snapshot) in
+            let val = snapshot.value as! String
+            self.postInfo.setGardenRef(gardenRef: val)
+        })
+        let crops = ["Blueberries","Apples","Asparagus"]
+        self.postInfo.setCrops(cropNames: crops)
+    }
+    
+    func getCropNames() -> [String]{
+        let crops = [String]()
+        return crops
     }
 }
