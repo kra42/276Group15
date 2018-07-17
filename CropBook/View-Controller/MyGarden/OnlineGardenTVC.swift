@@ -1,19 +1,18 @@
 //
-//  GardenTableViewCell.swift
+//  OnlineGardenTVC.swift
 //  CropBook
 //
-//  Created by jon on 2018-07-15.
+//  Created by jon on 2018-07-17.
 //  Copyright © 2018 CMPT276-Group15. All rights reserved.
 //
 
 import UIKit
 
-class GardenTableViewCell: UITableViewCell {
+class OnlineGardenTVC: UITableViewCell {
 
     @IBOutlet weak var gardenImage: UIImageView!
     @IBOutlet weak var gardenLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var postButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
