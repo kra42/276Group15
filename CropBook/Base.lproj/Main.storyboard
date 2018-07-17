@@ -31,6 +31,7 @@
                                 <rect key="frame" x="0.0" y="126" width="375" height="378"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gardenCell" rowHeight="119" id="YZt-eY-mqS" customClass="GardenTableViewCell" customModule="CropBook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="119"/>
@@ -132,7 +133,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="YOG-a9-rgW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Garden List" id="v6j-le-OIW">
@@ -151,44 +152,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOo-J8-TZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2316" y="-1764.4677661169417"/>
-        </scene>
-        <!--Gardens-->
-        <scene sceneID="hNz-n2-bh7">
-            <objects>
-                <viewController id="9pv-A4-QxB" customClass="MyGardenController" customModule="CropBook" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUE-jb-upC">
-                                <rect key="frame" x="72" y="189" width="253" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Existing Gardens">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87g-46-Zcc">
-                                <rect key="frame" x="72" y="367" width="253" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Create New Garden">
-                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="ole-Zz-L0C"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Gardens" id="gSp-sg-Fbn">
-                        <barButtonItem key="backBarButtonItem" title="Garden List" id="2wJ-Tv-m9X"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1433" y="-1863"/>
         </scene>
         <!--Garden Share Controller-->
         <scene sceneID="LSP-9C-Fcj">
@@ -430,6 +393,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="341"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="17" indentationWidth="0.0" reuseIdentifier="cropCell" rowHeight="120" id="L2P-pf-tAg" customClass="CropTableViewCell" customModule="CropBook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
@@ -475,7 +439,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TOg-es-w1V" firstAttribute="leading" secondItem="2a4-gj-uO7" secondAttribute="leading" constant="144" id="XOb-Fa-eqr"/>
                             <constraint firstItem="2a4-gj-uO7" firstAttribute="bottom" secondItem="TOg-es-w1V" secondAttribute="bottom" constant="49" id="r4S-sI-wpl"/>
@@ -616,7 +580,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="Hty-Ti-wnf" firstAttribute="centerX" secondItem="YFq-G6-kLw" secondAttribute="centerX" id="7VQ-hY-ApR"/>
                                             <constraint firstItem="B7Y-U1-Lly" firstAttribute="top" secondItem="slE-fE-12K" secondAttribute="bottom" constant="429" id="MsB-1r-cbl"/>
@@ -628,6 +592,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="YFq-G6-kLw" firstAttribute="leading" secondItem="xiS-7s-t5H" secondAttribute="leading" id="Q0s-Jb-7YR"/>
                                     <constraint firstAttribute="bottom" secondItem="YFq-G6-kLw" secondAttribute="bottom" id="VXf-oB-hFp"/>
@@ -688,7 +653,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dGy-Qu-zwr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Crop Library" id="78Z-o7-xHf"/>
@@ -745,7 +710,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bHS-Fq-N1a"/>
                     </view>
                     <connections>
@@ -768,6 +733,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="AMU-wl-H0d">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -810,7 +776,9 @@
                                 <rect key="frame" x="127" y="203" width="121" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Search"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="searchLib:" destination="To3-Mx-sAc" eventType="touchUpInside" id="Mzk-RG-UpJ"/>
                                 </connections>
@@ -819,11 +787,11 @@
                                 <rect key="frame" x="16" y="328" width="343" height="194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.38285093350009436" blue="0.3505382955004519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="R8Y-LR-OKx"/>
                     </view>
                     <connections>
@@ -958,7 +926,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="jhG-GM-UhT" firstAttribute="top" secondItem="VNv-US-eBC" secondAttribute="bottom" constant="404" id="4EE-kQ-1eh"/>
                                             <constraint firstAttribute="bottom" secondItem="Atw-y3-buG" secondAttribute="bottom" id="OWI-zI-Udg"/>
@@ -967,6 +935,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="FQ6-Zc-oCt" secondAttribute="bottom" constant="8" id="AAA-1g-rm3"/>
                                     <constraint firstItem="FQ6-Zc-oCt" firstAttribute="leading" secondItem="w55-So-kN4" secondAttribute="leading" id="AUV-35-nX1"/>
@@ -977,7 +946,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="W99-7A-VuE" firstAttribute="trailing" secondItem="w55-So-kN4" secondAttribute="trailing" id="755-ms-bhm"/>
                             <constraint firstItem="w55-So-kN4" firstAttribute="top" secondItem="W99-7A-VuE" secondAttribute="top" id="FGV-ba-Fhp"/>
@@ -1216,7 +1185,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.39440551639999999" green="0.60785702720000001" blue="0.46291602749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="m9a-cI-sg1" firstAttribute="trailing" secondItem="fu2-Sa-sZi" secondAttribute="trailing" constant="67" id="BmL-k0-7fq"/>
                             <constraint firstItem="NN9-VW-dVI" firstAttribute="centerX" secondItem="fu2-Sa-sZi" secondAttribute="centerX" id="O9h-Oh-slV"/>
@@ -1451,7 +1420,7 @@
                                                 </connections>
                                             </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Task/Description Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wca-bp-BJT">
-                                                <rect key="frame" x="8" y="99" width="367" height="135"/>
+                                                <rect key="frame" x="8" y="105" width="359" height="135"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1508,7 +1477,7 @@
         <image name="icons8-world-map-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d6f-Zu-94N"/>
+        <segue reference="xpI-mx-ptx"/>
         <segue reference="JzW-6c-Fw5"/>
     </inferredMetricsTieBreakers>
 </document>

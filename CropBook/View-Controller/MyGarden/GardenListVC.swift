@@ -8,13 +8,11 @@
 
 import UIKit
 import Firebase
-<<<<<<< HEAD
-var GardenList = [MyGarden?]()
-=======
+
 var GardenList=[MyGarden?]()
 var OnlineGardenList=[MyGarden?]()
 var OfflineGardenList=[MyGarden?]()
->>>>>>> master
+
 class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     let ref=Database.database().reference()
