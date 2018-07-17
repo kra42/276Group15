@@ -93,7 +93,7 @@ class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBAction func AddCrop(_ sender: Any) {
         print("ADDING CROP");
         profName = cropNameField.text!
-        let newCropProf = CropProfile(cropInfo : mainLib[libIndex], profName : profName)
+        let newCropProf = CropProfile(cropInfo : mainLib[libIndex], cropName : profName)
         GardenList[gardenIndex]?.cropProfile.append(newCropProf)
         self.navigationController?.popViewController(animated: true)
         

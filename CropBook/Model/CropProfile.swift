@@ -31,9 +31,9 @@ class CropProfile{
         self.notif = Notifications()
     }
     
-    init (cropInfo : CropInfo, profName : String){
+    init (cropInfo : CropInfo, cropName : String){
         self.cropName = cropInfo.getName()
-        self.profName = profName
+        self.profName = cropName
         self.cropType = cropInfo.getType()
         self.wateringVariable = cropInfo.getCoEff()
         self.plantCare = cropInfo.getCare()
