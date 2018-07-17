@@ -34,6 +34,7 @@
 		FC53835820E8BAB6009651E7 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53835720E8BAB6009651E7 /* Coefficients.swift */; };
 		FC53835B20E8BAC5009651E7 /* CropInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53835920E8BAC5009651E7 /* CropInfo.swift */; };
 		FC53835C20E8BAC5009651E7 /* CropLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53835A20E8BAC5009651E7 /* CropLibrary.swift */; };
+		FC66DD1720FD99A800FBD2B1 /* CropTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC66DD1620FD99A800FBD2B1 /* CropTableViewCell.swift */; };
 		FC6C926120FBAA3700C43121 /* GardenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C926020FBAA3700C43121 /* GardenTableViewCell.swift */; };
 		FC754B7920E5C88500302A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B7820E5C88500302A58 /* AppDelegate.swift */; };
 		FC754B7D20E5C88500302A58 /* CropLibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC754B7C20E5C88500302A58 /* CropLibraryVC.swift */; };
@@ -99,6 +100,7 @@
 		FC53835720E8BAB6009651E7 /* Coefficients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coefficients.swift; sourceTree = "<group>"; };
 		FC53835920E8BAC5009651E7 /* CropInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropInfo.swift; sourceTree = "<group>"; };
 		FC53835A20E8BAC5009651E7 /* CropLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropLibrary.swift; sourceTree = "<group>"; };
+		FC66DD1620FD99A800FBD2B1 /* CropTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropTableViewCell.swift; sourceTree = "<group>"; };
 		FC6C926020FBAA3700C43121 /* GardenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GardenTableViewCell.swift; sourceTree = "<group>"; };
 		FC754B7520E5C88500302A58 /* CropBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC754B7820E5C88500302A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				FCCAAD9320FAD19E0043301A /* CropCreateVC.swift */,
 				BF58EB1020EB6C0F000F239C /* CropProfileVC.swift */,
 				FC6C926020FBAA3700C43121 /* GardenTableViewCell.swift */,
+				FC66DD1620FD99A800FBD2B1 /* CropTableViewCell.swift */,
 			);
 			path = MyGarden;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				BB47DCAA20FB2CA000EA735D /* Posting.swift in Sources */,
 				FC754B7920E5C88500302A58 /* AppDelegate.swift in Sources */,
 				BF58EB1120EB6C0F000F239C /* CropProfileVC.swift in Sources */,
+				FC66DD1720FD99A800FBD2B1 /* CropTableViewCell.swift in Sources */,
 				BBC6990620F9CD0600F40BE5 /* ComposeVC.swift in Sources */,
 				BB4450A020EC462300F2BC99 /* CtgyTableVC.swift in Sources */,
 			);

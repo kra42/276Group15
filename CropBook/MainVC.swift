@@ -21,9 +21,9 @@ class MainVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let user=Auth.auth().currentUser{
+        //if let user=Auth.auth().currentUser{
             self.performSegue(withIdentifier: "toHomeScreen", sender: self)
-        }
+        //}
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
