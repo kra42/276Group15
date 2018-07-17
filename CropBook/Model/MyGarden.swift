@@ -15,7 +15,7 @@ class MyGarden{
     var gardenName:String
     var owner:Int?
     var gardenUserID:String?
-    var address:String?
+    var address:String?	
     var dailyCompletion:Bool?
 
     init(Name name:String,Address address:String) {

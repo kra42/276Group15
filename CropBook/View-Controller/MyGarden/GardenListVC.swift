@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-var GardenList=[MyGarden?]()
+var GardenList = [MyGarden?]()
 class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
