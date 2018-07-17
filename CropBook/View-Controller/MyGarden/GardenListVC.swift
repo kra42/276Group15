@@ -105,10 +105,25 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
     //Delete a selected garden
     @objc func deleteGarden(sender: UIButton){
         let passedIndex = sender.tag
-        print("DELETE")
-        GardenList.remove(at: passedIndex)
-        self.tableView.reloadData()
+        
+        // Create Alert Message
+        let alert = UIAlertController(title: "Delete Garden?", message: GardenList[passedIndex]?.gardenName, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated:true, completion:nil)
+            print("DELETE")
+            GardenList.remove(at: passedIndex)
+            self.tableView.reloadData()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated:true, completion:nil)
+            print("no delete")
+
+        }))
+        self.present(alert, animated:true, completion:nil)
     }
+    
+    
 
 
     //Pass gardenIndex to the next viewcontroller

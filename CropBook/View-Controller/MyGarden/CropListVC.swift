@@ -17,44 +17,65 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     var myIndex=0
     var gardenIndex = 0
     var refresher: UIRefreshControl!
-
+    var myGarden: MyGarden!
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return(GardenList[gardenIndex]!.cropProfile.count)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return(myGarden!.cropProfile.count)
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell=UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = GardenList[gardenIndex]?.cropProfile[indexPath.row].cropName
-        
-         return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cropCell", for:indexPath) as! CropTableViewCell
+        let name: String? = myGarden?.cropProfile[indexPath.row].cropName
+        cell.cropLabel?.text = name
+        cell.cropImage?.image = UIImage(named: (myGarden?.cropProfile[indexPath.row].getImage())!)
+        cell.deleteButton.addTarget(self, action: #selector(GardenInterface.deleteGarden), for: .touchUpInside)
+        cell.deleteButton.tag = indexPath.row
+        return cell
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
         performSegue(withIdentifier: "CropProfileSegue", sender: self)
         
     }
     
- 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.rowHeight = 120.0
         //self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = GardenList[gardenIndex]?.gardenName;
-        print("Number of Crops = {}", GardenList[gardenIndex]!.getSize())
+        self.myGarden = GardenList[gardenIndex]
+        self.title = myGarden?.gardenName;
+        print("Number of Crops = ", myGarden!.getSize())
         self.tableView.reloadData()
         //self.refresher.endRefreshing()
     }
     
-    
+    //Delete a selected garden
+    @objc func deleteGarden(sender: UIButton){
+        let passedIndex = sender.tag
+        
+        let alert = UIAlertController(title: "Remove Crop from Garden?", message: myGarden.cropProfile[passedIndex].GetCropName(), preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated:true, completion:nil)
+            print("DELETE")
+            self.myGarden.cropProfile.remove(at: passedIndex)
+            self.tableView.reloadData()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated:true, completion:nil)
+            print("no delete")
+        }))
+        self.present(alert, animated:true, completion:nil)
+        
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,16 +85,11 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CropProfileSegue"{
             let receiverVC = segue.destination as! CropProfileViewController
+            receiverVC.gardenIndex = self.gardenIndex
             receiverVC.myIndex = self.myIndex
         }else if segue.identifier == "createCrop"{
             let receiverVC = segue.destination as! CropCreateVC
             receiverVC.gardenIndex = gardenIndex
-
         }
-    }
-
-    @IBAction func backToGardens(_ sender : Any){
-        self.navigationController?.popViewController(animated: true)
-        performSegue(withIdentifier: "unwindSegue1", sender: self)
     }
 }
