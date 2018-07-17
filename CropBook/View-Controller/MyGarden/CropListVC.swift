@@ -59,9 +59,22 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     //Delete a selected garden
     @objc func deleteGarden(sender: UIButton){
         let passedIndex = sender.tag
-        print("DELETE")
-        myGarden.cropProfile.remove(at: passedIndex)
-        self.tableView.reloadData()
+        
+        let alert = UIAlertController(title: "Remove Crop from Garden?", message: myGarden.cropProfile[passedIndex].GetCropName(), preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated:true, completion:nil)
+            print("DELETE")
+            self.myGarden.cropProfile.remove(at: passedIndex)
+            self.tableView.reloadData()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated:true, completion:nil)
+            print("no delete")
+        }))
+        self.present(alert, animated:true, completion:nil)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,6 +92,4 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
             receiverVC.gardenIndex = gardenIndex
         }
     }
-    
-    
 }
