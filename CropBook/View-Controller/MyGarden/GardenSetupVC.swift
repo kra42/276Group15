@@ -23,27 +23,14 @@ class GardenSetupController: UIViewController {
     
     @IBOutlet weak var NameTF: UITextField!
     
-    
     @IBOutlet weak var AddressTF: UITextField!
-    
-
     
     @IBAction func CreateGarden(_ sender: Any) {
         if let garden=NameTF.text,let address=AddressTF.text{
+
             
-            //Write Garden into Firebase
-            
-            //Assign Attribute into garden
-           let gardenID = self.ref.child("Gardens").childByAutoId().key
-            self.ref.child("Gardens/\(gardenID)/gardenName").setValue(garden)
-         //   self.ref.child("Gardens/\(gardenID)/Crops").setValue()
-            self.ref.child("Gardens/\(gardenID)/Address").setValue(address)
-            
-            //Save gardenID into the user profile
-            guard let userid=Auth.auth().currentUser?.uid else {return}
-            let gardenRef=self.ref.child("Users/\(userid)/Gardens").child(gardenID)
-            gardenRef.setValue(gardenID)
-            gardenRef.setValue(["owner?":true])
+            let newGarden=MyGarden(Name:garden, Address:address)
+            OfflineGardenList.append(newGarden)
             
             self.navigationController?.popViewController(animated: true)
         }

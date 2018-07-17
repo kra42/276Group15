@@ -16,7 +16,6 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var tableView: UITableView!
     var myIndex=0
     var gardenIndex = 0
-    var refresher: UIRefreshControl!
     var myGarden: MyGarden!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,7 +52,6 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.title = myGarden?.gardenName;
         print("Number of Crops = ", myGarden!.getSize())
         self.tableView.reloadData()
-        //self.refresher.endRefreshing()
     }
     
     //Delete a selected garden
