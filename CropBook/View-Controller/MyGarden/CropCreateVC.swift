@@ -9,7 +9,6 @@ class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     @IBOutlet weak var createCrop: UIButton!
     
-    
     var isTableVisible = false
     var mainLib = lib.getMainLibrary()
     var profName = ""
@@ -26,7 +25,6 @@ class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         tblDropDown.delegate = self
         tblDropDown.dataSource = self
         tblDropDownHC.constant = 0
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,16 +47,18 @@ class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         btnNumberOfRooms.setTitle(mainLib[libIndex].getName(), for: .normal)
         btnNumberOfRooms.setBackgroundImage(UIImage(named: mainLib[libIndex].getImage()), for: .normal)
         cropSelected = true
+        cropNameField.text = mainLib[libIndex].getName()
+        createCrop?.isUserInteractionEnabled = true
+        createCrop?.isEnabled = true
+        createCrop?.alpha = 1.0
         UIView.animate(withDuration: 0.5) {
             self.tblDropDownHC.constant = 0
             self.isTableVisible = false
             self.view.layoutIfNeeded()
         }
-        
     }
 
     @IBAction func selectNumberOfRooms(_ sender : AnyObject) {
-        
         UIView.animate(withDuration: 0.5) {
             if self.isTableVisible == false {
                 self.isTableVisible = true
@@ -71,34 +71,21 @@ class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
     }
     
-
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            
         let text = (cropNameField.text! as NSString).replacingCharacters(in: range, with: string)
-
-        if !text.isEmpty{
-            if cropSelected{
-                createCrop?.isUserInteractionEnabled = true
-                createCrop?.isEnabled = true
-                createCrop?.alpha = 1.0
-            }
-        } else {
-            createCrop.isUserInteractionEnabled = false
-            createCrop.isEnabled = false
-            createCrop.alpha = 0.5
-        }
         return true
     } 
     
     @IBAction func AddCrop(_ sender: Any) {
+<<<<<<< HEAD
         print("ADDING CROP");
+=======
+>>>>>>> master
         profName = cropNameField.text!
         let newCropProf = CropProfile(cropInfo : mainLib[libIndex], cropName : profName)
         GardenList[gardenIndex]?.cropProfile.append(newCropProf)
         self.navigationController?.popViewController(animated: true)
-        
     }
     
-
 }
 

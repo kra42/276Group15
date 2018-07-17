@@ -51,7 +51,7 @@ class SignupVC: UIViewController {
             //first get uid
             guard let uid=Auth.auth().currentUser?.uid else{return}
             //save user info as path
-            self.ref.child("users/\(uid)/secret").setValue(secret)
+            self.ref.child("Users/\(uid)/secret").setValue(secret)
             
         }
         
