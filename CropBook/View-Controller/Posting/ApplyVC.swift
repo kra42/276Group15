@@ -22,11 +22,6 @@ class ApplyVC: UIViewController {
     var postRef : DatabaseReference?
     var uid = Auth.auth().currentUser?.uid
     override func viewDidLoad() {
-        if validApply{
-            print("It's true")
-        }else{
-            print("It's false")
-        }
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

@@ -68,7 +68,7 @@ class PostVC: UIViewController,UITableViewDataSource,UITableViewDelegate  {
     }
     
     @IBAction func applyPressed(_ sender: Any) {
-        isValidApply()
+        //isValidApply()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute:{self.performSegue(withIdentifier: "applySegue", sender: self)})
     }
     
