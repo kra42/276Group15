@@ -1519,7 +1519,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyE-VP-BI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3085.5999999999999" y="2737.3313343328336"/>
+            <point key="canvasLocation" x="2662" y="3018"/>
         </scene>
         <!--Your PostsVC-->
         <scene sceneID="4l8-fg-cHp">
@@ -1560,17 +1560,17 @@
                         <viewLayoutGuide key="safeArea" id="wbu-AI-ljV"/>
                     </view>
                     <connections>
-                        <segue destination="mTt-vO-Lo3" kind="show" id="HBP-g1-UvB"/>
+                        <segue destination="mTt-vO-Lo3" kind="show" identifier="acceptSegue" id="HBP-g1-UvB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYU-TV-Hrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2397.5999999999999" y="812.74362818590714"/>
+            <point key="canvasLocation" x="2404" y="860"/>
         </scene>
-        <!--View Controller-->
+        <!--AcceptVC-->
         <scene sceneID="y0I-42-4Op">
             <objects>
-                <viewController id="mTt-vO-Lo3" sceneMemberID="viewController">
+                <viewController id="mTt-vO-Lo3" customClass="acceptVC" customModule="CropBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ph8-85-ztB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1580,7 +1580,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71K-iC-UoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3156" y="813"/>
+            <point key="canvasLocation" x="3242" y="860"/>
         </scene>
         <!--Post-->
         <scene sceneID="OOE-rR-CPH">
@@ -1742,7 +1742,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFz-jI-jFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3086" y="1722"/>
+            <point key="canvasLocation" x="2663" y="1808"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nGT-Xp-EBq">
@@ -1757,6 +1757,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZy-nm-Fqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3886" y="860"/>
         </scene>
     </scenes>
     <resources>

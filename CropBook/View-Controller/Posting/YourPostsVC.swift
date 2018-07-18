@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class YourPostsVC: UIViewController,UITableViewDataSource,UITableViewDelegate  {
     
+    let ref = Database.database().reference()
     var posts : [UserPost] = []
+    var postId : String = ""
+    var gardId : String = ""
+    var acceptDatas : [AcceptData] = []
     override func viewDidLoad() {
         print(posts.count)
         super.viewDidLoad()
@@ -33,12 +38,38 @@ class YourPostsVC: UIViewController,UITableViewDataSource,UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-        //gardenId = gardensIds![indexPath.row].getId()
+        postId = posts[indexPath.row].getId()
+        getRequests()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute:{self.performSegue(withIdentifier: "acceptSegue", sender: self)})
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let receiverVC = segue.destination as! acceptVC
         
     }
     
     func getRequests(){
-        
-        
+        let gardenId = ref.child("Posts").child(postId).child("GardenId")
+        let postRef = ref.child("Posts").child(postId).child("Requests")
+        let gId = ""
+        gardenId.observe(.value, with: {(snapshot) in
+            let gId = snapshot.value as! String
+        })
+        postRef.observe(.value, with: {(snapshot) in
+            for snap in snapshot.children{
+                let userSnap = snap as! DataSnapshot
+                let uID = userSnap.key
+                let userDict = userSnap.value as! [String:AnyObject]
+                let info = userDict["info"] as! String
+                let name = userDict["name"] as! String
+                let acptData = AcceptData()
+                acptData.setInfo(info: info)
+                acptData.setName(name: name)
+                acptData.setPostId(pId: uID)
+                acptData.setGardenId(gId: gId)
+                print(acptData.gardenId)
+            }
+        })
     }
 }
