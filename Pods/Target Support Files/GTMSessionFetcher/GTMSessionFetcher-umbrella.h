@@ -14,9 +14,12 @@
 #import "GTMSessionFetcherLogging.h"
 #import "GTMSessionFetcherService.h"
 #import "GTMSessionUploadFetcher.h"
+<<<<<<< HEAD
 #import "GTMGatherInputStream.h"
 #import "GTMMIMEDocument.h"
 #import "GTMReadMonitorInputStream.h"
+=======
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
 
 FOUNDATION_EXPORT double GTMSessionFetcherVersionNumber;
 FOUNDATION_EXPORT const unsigned char GTMSessionFetcherVersionString[];

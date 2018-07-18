@@ -149,7 +149,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_dsym "${PODS_ROOT}/AerisWeather/lib/AerisCoreUI.framework.dSYM"
   install_framework "${PODS_ROOT}/AerisWeather/lib/AerisWeatherKit.framework"
   install_dsym "${PODS_ROOT}/AerisWeather/lib/AerisWeatherKit.framework.dSYM"
+<<<<<<< HEAD
   install_framework "${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework"
+=======
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
   install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework"
@@ -162,7 +165,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_dsym "${PODS_ROOT}/AerisWeather/lib/AerisCoreUI.framework.dSYM"
   install_framework "${PODS_ROOT}/AerisWeather/lib/AerisWeatherKit.framework"
   install_dsym "${PODS_ROOT}/AerisWeather/lib/AerisWeatherKit.framework.dSYM"
+<<<<<<< HEAD
   install_framework "${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework"
+=======
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
   install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework"

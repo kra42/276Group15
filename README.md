@@ -18,6 +18,12 @@ open -a Xcode Podfile
 
 pod ‘AerisWeather’
 
+<<<<<<< HEAD
+=======
+pod 'Firebase'
+
+pod 'FirebaseDatabase'
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
 
 //after saving pod file, go back to terminal
 

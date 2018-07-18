@@ -6,10 +6,13 @@ target 'CropBook' do
   use_frameworks!
 
   # Pods for CropBook
+<<<<<<< HEAD
 pod 'Firebase'
 pod 'FirebaseAuth'
 pod 'FirebaseDatabase'
 pod 'GoogleSignIn'
+=======
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
 
 pod 'AerisWeather'
 
@@ -23,4 +26,14 @@ pod 'AerisWeather'
     # Pods for testing
   end
 
+<<<<<<< HEAD
+=======
+pod 'Firebase/Core'
+
+pod 'Firebase/Database'
+
+pod 'Firebase/Auth'
+pod 'Firebase/Storage'
+
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
 end

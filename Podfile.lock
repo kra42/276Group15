@@ -6,13 +6,28 @@ PODS:
     - AerisWeather/Core
   - AerisWeather/Data (3.0.2):
     - AerisWeather/CoreUI
+<<<<<<< HEAD
   - Firebase (5.4.0):
     - Firebase/Core (= 5.4.0)
+=======
+  - Firebase/Auth (5.4.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (= 5.0.2)
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
   - Firebase/Core (5.4.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.0.1)
   - Firebase/CoreOnly (5.4.0):
     - FirebaseCore (= 5.0.5)
+<<<<<<< HEAD
+=======
+  - Firebase/Database (5.4.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (= 5.0.2)
+  - Firebase/Storage (5.4.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (= 3.0.0)
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
   - FirebaseAnalytics (5.0.1):
     - FirebaseCore (~> 5.0)
     - FirebaseInstanceID (~> 3.0)
@@ -28,6 +43,7 @@ PODS:
     - leveldb-library (~> 1.18)
   - FirebaseInstanceID (3.1.1):
     - FirebaseCore (~> 5.0)
+<<<<<<< HEAD
   - GoogleSignIn (4.1.2):
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
@@ -50,6 +66,15 @@ PODS:
   - GTMSessionFetcher/Core (1.1.15)
   - GTMSessionFetcher/Full (1.1.15):
     - GTMSessionFetcher/Core (= 1.1.15)
+=======
+  - FirebaseStorage (3.0.0):
+    - FirebaseCore (~> 5.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - GTMSessionFetcher/Core (1.1.15)
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -59,10 +84,17 @@ PODS:
 
 DEPENDENCIES:
   - AerisWeather
+<<<<<<< HEAD
   - Firebase
   - FirebaseAuth
   - FirebaseDatabase
   - GoogleSignIn
+=======
+  - Firebase/Auth
+  - Firebase/Core
+  - Firebase/Database
+  - Firebase/Storage
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -73,9 +105,14 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseDatabase
     - FirebaseInstanceID
+<<<<<<< HEAD
     - GoogleSignIn
     - GoogleToolboxForMac
     - GTMOAuth2
+=======
+    - FirebaseStorage
+    - GoogleToolboxForMac
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
@@ -88,13 +125,22 @@ SPEC CHECKSUMS:
   FirebaseCore: 42b3267233bd21a5abd54117ccc38ca3dd0f8e83
   FirebaseDatabase: 27be5ac5bc75e0b17537b2bbfada8258addcc8cd
   FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
+<<<<<<< HEAD
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
+=======
+  FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
+<<<<<<< HEAD
 PODFILE CHECKSUM: f944786f2ecfe15f465318972f159d328928997f
+=======
+PODFILE CHECKSUM: 9153cbd928e0f8ccf3daf80823641242bc619960
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
 
 COCOAPODS: 1.5.3

@@ -9,7 +9,11 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
+<<<<<<< HEAD
 	<string>cmpt276.proj</string>
+=======
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

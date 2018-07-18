@@ -663,7 +663,11 @@ Copyright 2018 Google
 
 Copyright 2018 Google
 
+<<<<<<< HEAD
 ## GTMOAuth2
+=======
+## FirebaseStorage
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
 
 
                                  Apache License
@@ -1075,10 +1079,13 @@ Copyright 2018 Google
    limitations under the License.
 
 
+<<<<<<< HEAD
 ## GoogleSignIn
 
 Copyright 2018 Google
 
+=======
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
 ## GoogleToolboxForMac
 
 

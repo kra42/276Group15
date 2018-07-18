@@ -7,7 +7,11 @@
 //
 
 import XCTest
+<<<<<<< HEAD
 @testable import CropBook
+=======
+//@testable import CropBook
+>>>>>>> 650c8a7f8b3b6305049aafbd7780bd0968dc1348
 
 class CropBookTests: XCTestCase {
     
