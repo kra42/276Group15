@@ -1,19 +1,18 @@
 //
-//  GardenTableViewCell.swift
+//  CategoryTableViewCell.swift
 //  CropBook
 //
-//  Created by jon on 2018-07-15.
+//  Created by jon on 2018-07-17.
 //  Copyright © 2018 CMPT276-Group15. All rights reserved.
 //
 
 import UIKit
 
-class GardenTableViewCell: UITableViewCell {
+class CategoryTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var gardenImage: UIImageView!
-    @IBOutlet weak var gardenLabel: UILabel!
-    @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var cropImage: UIImageView!
+    @IBOutlet weak var cropLabel: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

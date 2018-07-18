@@ -6,6 +6,7 @@ class CropProfile{
     
     //varaibles for crop attributes
     var cropName : String
+    var profName : String
     var cropType : String
     var wateringVariable : Coefficients
     var plantCare : String
@@ -18,6 +19,7 @@ class CropProfile{
     
     init (){
         self.cropName = ""
+        self.profName = ""
         self.cropType = ""
         self.wateringVariable = Coefficients(initial: 0, mid: 0, end: 0)
         self.plantCare = ""
@@ -30,7 +32,8 @@ class CropProfile{
     }
     
     init (cropInfo : CropInfo, cropName : String){
-        self.cropName = cropName
+        self.cropName = cropInfo.getName()
+        self.profName = cropName
         self.cropType = cropInfo.getType()
         self.wateringVariable = cropInfo.getCoEff()
         self.plantCare = cropInfo.getCare()

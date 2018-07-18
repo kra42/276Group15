@@ -1,43 +1,5 @@
  [
   {
-  "cropName": "Apples",
-  "coEfficients": {
-  "init": 0.70,
-  "mid": 1.00,
-  "end": 0.75
-  },
-  "Type": "Fruit",
-  "Image": "Apples.jpeg”,
-  "sunExposure": "Sun/Partial Shade",
-  "soilType": "Any",
-  "soilpH": "Slightly acidic/Neutral",
-  "plant" : "Plant in mid-fall or early winter when it's not too cold for a little root growth to help them establish. Should be planted with at least one other apple tree which flowers at a similar time to aid pollination.",
-  "feeding" : "Not required",
-  "spacing" : "Single Plants: 5.00m each way (minimum) Rows: (5.00m) with (5.00m) row gap (minimum)",
-  "notes" : "Prune towards the end of the season to remove any dead or overcrowded branches and to shape if required.",
-  "harvesting" : "Harvest when ripe (70% red in color)"
-  },
-
-  {
-  "cropName": "Artichokes",
-  "coEfficients": {
-  "init": 0.5,
-  "mid": 1.00,
-  "end": 0.80
-  },
-  "Type": "Vegetable",
-  "Image": "Artichokes.jpeg”,
-  "sunExposure": "Full Sun",
-  "soilType": "Loamy, Sandy",
-  "soilpH": "Neutral",
-  "plant" : "Sow in spring is colder regions; sow in fall in warm subtropical regions. May wish to start 8 weeks indoors",
-  "feeding" : "Keep well fed with liquid feed through midsummer. Feed less when plants begin to produce buds.",
-  "spacing" : "Single Plants: (90cm) each way (minimum) Rows:  (90cm) with (90cm) row gap (minimum)",
-  "notes" : "Need plenty of water, so mulch generously to keep the soil cool and moist.",
-  "harvesting" : "Use a sharp knife to cut the heads (flower buds) with 2 inches of stem attached while they are still closed or justly slightly opening."
-  },
-
-  {
   "cropName": "Asparagus",
   "coEfficients": {
   "init": 0.3,
@@ -55,45 +17,7 @@
   "notes" : "After the stems die back in early winter, cut them off at ground level and compost them. Remove weeds, apply compost and mulch, and your yearly maintenance is done.",
   "harvesting" : "Begin gathering spears the second year after planting, cutting all spears that appear for a month in early spring. In subsequent years, harvest for 6 weeks each spring."
   },
-
-  {
-  "cropName": "Barley",
-  "coEfficients": {
-  "init": 0.3,
-  "mid": 1.15,
-  "end": 0.4
-  },
-  "Type": "Cereal",
-  "Image": "Barley.jpeg",
-  "sunExposure": "Full Sun",
-  "soilType": "Well Drained",
-  "soilpH": "Acidic",
-  "plant" : "For winter barley, October is the best time to plant. For spring barley, plant in January.",
-  "feeding" : "Regular compost",
-  "spacing" : "Sow the seeds in the rows, ensuring that there are 20 to 25 seeds per square foot of space.",
-  "notes" : "Barley does not require too much watering. Too much watering can lead to decomposition.",
-  "harvesting" : "Barley is harvested the same as wheat: cut, bundled and shocked to dry. Wear a shirt when harvesting barley as the awns can irritate your skin. Barley may be stored in the bundle and fed to stock without threshing. "
-  },
-
-  {
-  "cropName": "Beans",
-  "coEfficients": {
-  "init": 0.5,
-  "mid": 1.05,
-  "end": 0.9
-  },
-  "Type": "Vegetable",
-  "Image": "Beans.jpeg",
-  "sunExposure": "Full sun to very light shade.",
-  "soilType": "Regular, well drained soil.",
-  "soilpH": "Slightly Acidic",
-  "plant" : "Plant seeds 2 inches deep and 6 inches apart in late spring, after the last frost has passed and the soil is warm. Install a sturdy trellis before you plant your pole beans.",
-  "feeding" : "Mix an organic fertilizer into the soil before planting, using rates given on the label. Supplemental fertilizer seldom required.",
-  "spacing" : "Single Plants: (25cm) each way (minimum) Rows: (15cm) with (35cm) row gap (minimum)",
-  "notes" : "Mulch to keep the soil cool and moist, and to reduce problems with weeds.",
-  "harvesting" : "Gather pods before they fill with seeds. When picked often, pole beans continue to produce all summer."
-  },
-
+  
   {
   "cropName": "Beets",
   "coEfficients": {
@@ -152,25 +76,6 @@
   "harvesting" : "Use a sharp knife to harvest the primary head when the beads are plump and well-filled. Many varieties produce numerous smaller side shoots after the primary head is cut."
   },
   
-  {
-  "cropName": "Brussel Sprouts",
-  "coEfficients": {
-  "init": 0.7,
-  "mid": 1.05,
-  "end" 0.95: 
-  },
-  "Type": "Vegetable",
-  "Image": "BrusselSprouts.jpeg",
-  "sunExposure": "Full sun.",
-  "soilType": "Rich, deep soil, firm with organic compost.",
-  "soilpH": "Slightly Acidic",
-  "plant" : "Start indoors in early spring and set plants out when they have 5 or more leaves.",
-  "feeding" : "Mix a high-nitrogen compost into the soil before planting.",
-  "spacing" : "Single Plants: (60cm) each way (minimum) Rows: (60cm) with (60cm) row gap (minimum)",
-  "notes" : "Under the coldest conditions, colonies of gray-green cabbage aphids can seriously infest plants. Control early outbreaks with insecticidal soap.",
-  "harvesting" : "Harvest from the bottom of the plant upward, twisting off sprouts that are larger than a marble. Removing nearby leaves helps to make room for growing sprouts."
-  },
-
   {
   "cropName": "Cabbage",
   "coEfficients": {
@@ -286,44 +191,6 @@
   "harvesting" : "Pick cucumbers at least every other day by snipping them from the vine with pruning shears. Many varieties are extremely productive. Fruits with hard seeds inside are overripe."
   },
   
-  {
-  "cropName": "Eggplants",
-  "coEfficients": {
-  "init": 0.6,
-  "mid": 1.15,
-  "end": 0.8
-  },
-  "Type": "Vegetable",
-  "Image": "Eggplants.jpeg",
-  "sunExposure": "Full Sun",
-  "soilType": "Warm, fertile, and well drained.",
-  "soilpH": "Slightly Acidic",
-  "plant" : "Sow indoors 6 weeks before last spring frost, or buy seedlings in late spring. Transplant to larger pots if needed. Plant out in late spring, when the weather is settled and warm.",
-  "feeding" : "From midsummer onward, drench with a liquid feed every two weeks.",
-  "spacing" : "Single Plants: (40cm) each way (minimum)Rows: (35cm) with (45cm) row gap (minimum)",
-  "notes" : "Stake plants to keep them from falling over when they become heavy with fruit. Mulch to keep soil lightly moist.",
-  "harvesting" : "Use pruning shears to cut fruits from the stem. Perfect fruits have shiny skins and only a few immature seeds inside."
-  },
-
-  {
-  "cropName": "Garlic",
-  "coEfficients": {
-  "init": 0.7,
-  "mid": 1.00,
-  "end": 0.7
-  },
-  "Type": "Vegetable",
-  "Image": "Garlic.jpeg",
-  "sunExposure": "Sunny",
-  "soilType": "Fertile, well-drained soil with organic compost.",
-  "soilpH": "Slightly Acidic",
-  "plant" : "In fall, plant individual cloves 4 inches deep with the pointed ends up. Cover the planting with at least 3 inches of mulch.",
-  "feeding" : "Not usually required.",
-  "spacing" : "Single Plants: (15cm) each way (minimum) Rows: (10cm) with (25cm) row gap (minimum)",
-  "notes" : "Use hardy Rocambole types in cold climates. Where winters are mild, grow heavy-yielding artichoke types. Among the most deer-resistant of all edibles.",
-  "harvesting" : "Dig up bulbs in summer when one third of the leaves become dry and lose their green color. Shake off soil, and cure whole plants dry in a warm, shady place for two weeks before trimming and storing the garlic bulbs."
-  },
-
   {
   "cropName": "Green onions",
   "coEfficients": {
@@ -476,24 +343,4 @@
   "harvesting" : "Ripe watermelons sound deep and resonant when thumped, and the curled tendril opposite the melon should be brown. Wipe clean and store indoors."
   
   }
-  
-  {
-  "cropName": "Wheat",
-  "coEfficients": {
-  "init": 0.3,
-  "mid": 1.15,
-  "end": 0.4
-  },
-  "Type": "Cereal",
-  "Image": "Wheat.jpeg",
-  "sunExposure": "Full Sun",
-  "soilType": "Any well drained soil.",
-  "soilpH": "Acidic",
-  "plant" : "Sow in late summer or early fall for an overwintered crop. Spring wheat can be planted while the soil is still cool. Broadcast seed into cultivated soil so that the seeds are about 3 inches (7 cm) apart and one-half inch (1 cm) deep. No thinning is required. Increase spacing to 8 inches (20cm) apart when growing wheat with other cover crops.",
-  "feeding" : "When using wheat to improve very poor soil, mixing a balanced organic fertilizer into the soil before planting will give better results.",
-  "spacing" : "Single Plants: (10cm) each way (minimum) Rows: (10cm) with (10cm) row gap (minimum)",
-  "notes" : "Primarily grown to increase organic matter, break up dense subsoil and crowd out weeds. Makes a beautiful show in spring.",
-  "harvesting" : "Mow down plants in spring, before they develop seeds. Or, gather the immature seed tops and dry them for arrangements, and then pull up the plants. They can be used as mulch or composted."
-  },
-  
   ]

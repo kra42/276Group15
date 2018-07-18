@@ -7,17 +7,29 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseDatabase
 
 class ComposeVC: UIViewController {
-    
-    
+
     @IBOutlet weak var textView: UITextView!
     var ref : DatabaseReference?
-    var gardensIds : [GardenData]?
+    var gardensIds : [PostData]?
+    var gardenStrings : [String]?
     override func viewDidLoad() {
-        super.viewDidLoad()
+        let uid = Auth.auth().currentUser?.uid
         ref = Database.database().reference()
+        guard let gardenRef = ref?.child("users").child(uid!) else{ return }
+        
+        gardenRef.observeSingleEvent(of: .value) { (snapshot) in
+            for child in snapshot.children{
+                let snap = child as! DataSnapshot
+                let key = snap.key
+                let value = snap.value
+                print("key = \(key) , value = \(value!)")
+            }
+        }
+        super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
@@ -28,22 +40,12 @@ class ComposeVC: UIViewController {
     }
     
     @IBAction func addPost(_ sender: Any) {
-        ref?.child("Posts").childByAutoId().setValue(textView.text)
+        ref?.child("Posts").childByAutoId().child("test").setValue(textView.text)
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func removePost(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
