@@ -111,10 +111,11 @@ class ComposeVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
             let userRef = ref?.child("Users").child(uid!).child("Posts").child(postKey)
             userRef?.setValue(true)
         }
-        /*
-         ref?.child("Posts").childByAutoId().child("test").setValue(textView.text)
+        
+        /*ref?.child("Posts").childByAutoId().child("test").setValue(textView.text)
         presentingViewController?.dismiss(animated: true, completion: nil)
          */
+        performSegue(withIdentifier: "unwindCompose", sender: self)
     }
     
     @IBAction func removePost(_ sender: Any) {
