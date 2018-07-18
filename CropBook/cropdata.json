@@ -260,6 +260,24 @@
  "harvesting" : "Cut individual stalks as needed in the kitchen, or pull entire plants."
  },
  
+ {
+ "cropName": "Cherries",
+ "coEfficients": {
+ "init": 0.45,
+ "mid": 0.95,
+ "end": 0.7
+ },
+ "Type": "Fruit",
+ "Image": "Cherries.jpg",
+ "sunExposure": "Full Sun, Part Sun",
+ "soilType": "Fertile, moisture-retentive but well-drained soil.",
+ "soilpH": "Slightly Acidic to Neutral",
+ "plant" : "Prepare a large hole by breaking up the soil and adding plenty of well-rotted organic matter. A wide hole is better than a very deep one. Mulch after planting, and encircle the trunk with a wire cage or protective pipe to protect the young tree from animal and insect pests. Young cherry trees are at high risk for damage from insects that bore into the main trunk.",
+ "feeding" : "Cherries benefit from a mulch of well-rotted organic matter and a feed with a balanced organic fertilizer in spring.",
+ "spacing" : "Single Plants: (3.00m) each way (minimum) Rows: (3.00m) row gap (minimum)",
+ "notes" : "Many sweet cherries need to be grown with at least one other flowering at a similar time for pollination, but many tart cherries are self-fertile. Prune in late winter to shape trees and removed damaged branches. Healthy cherry trees will bear for twenty years or more.",
+ "harvesting" : "Pick cherries carefully so as not to damage the delicate fruit."
+ },
  
  {
  "cropName": "Corn",
@@ -279,7 +297,6 @@
  "notes" : "Plant in blocks of at least 15 plants, all the same variety, to insure good wind pollination. Keep well watered in dry spells.",
  "harvesting" : "Sweet corn is ready when the ears feel firm and full when grasped, and a test kernel pierced with a fingernail released milky juice. Harvest in the morning, and promptly refrigerate ears to help them hold their delicate sugars."
  },
- 
  
  {
  "cropName": "Cucumber",
@@ -340,6 +357,24 @@
  "harvesting" : "Dig up bulbs in summer when one third of the leaves become dry and lose their green color. Shake off soil, and cure whole plants dry in a warm, shady place for two weeks before trimming and storing the garlic bulbs."
  },
  
+ {
+ "cropName": "Grapes",
+ "coEfficients": {
+ "init": 0.3,
+ "mid": 1.05,
+ "end": 0.50
+ },
+ "Type": "Vegetable",
+ "Image": "Grapes",
+ "sunExposure": "Full Sun or Part Sun.",
+ "soilType": "Will grow on relatively poor soil as long as it is well drained and compost is dug in.",
+ "soilpH": "Slightly Acidic to Neutral.",
+ "plant" : "Plant in mid-fall or early winter when it's not too cold for a little root growth to help them establish.",
+ "feeding" : "Mulch with well rotted compost annually.",
+ "spacing" : "Single Plants: (1.50m) each way (minimum) Rows: (1.50m) with (1.50m) row gap (minimum)",
+ "notes" : "After harvesting prune the bush back to three buds. Vines can gradually be trained up a support system.",
+ "harvesting" : "Harvest fruit when ripe, thinning a few out beforehand to allow others to swell.",
+ },
  
  {
  "cropName": "Green onions",
