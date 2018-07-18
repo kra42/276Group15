@@ -16,7 +16,7 @@ class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     var profName = ""
     var cropSelected = false
     var libIndex = 0
-    var gardenIndex = 0;
+    var gardenIndex:Int?;
     var Online:Bool?
     
     override func viewDidLoad() {
@@ -87,16 +87,22 @@ class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         if(Online)!{
             //add Crop into Firebase Database
+            if let gardenIndex=gardenIndex,
             let gardenID=OnlineGardenList[gardenIndex]?.gardenID
-            let cropname=newCropProf.GetCropName()
-            let gardenRef=ref.child("Gardens/\(gardenID!)/CropList").childByAutoId()
-            gardenRef.child("CropName").setValue(cropname)
-            gardenRef.child("ProfName").setValue(profName)
+            {
+                let cropname=newCropProf.GetCropName()
+                let gardenRef=ref.child("Gardens/\(gardenID)/CropList").childByAutoId()
+            
+                gardenRef.child("CropName").setValue(cropname)
+                gardenRef.child("ProfName").setValue(profName)
+            }
             print("Crop added")
             
             
         }else{
-            OfflineGardenList[gardenIndex]?.cropProfile.append(newCropProf)
+            if let gardenIndex=gardenIndex{
+                OfflineGardenList[gardenIndex]?.cropProfile.append(newCropProf)
+            }
         }
         
         self.navigationController?.popViewController(animated: true)

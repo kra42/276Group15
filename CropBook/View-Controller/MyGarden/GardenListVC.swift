@@ -137,10 +137,10 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
         //remove child with the matching gardenID
         print("Garden Removed")
         //remove garden from Users
-        let userid=Auth.auth().currentUser?.uid
+        if let userid=Auth.auth().currentUser?.uid{
         let UserGardenRef=ref.child("Users/\(userid)/Gardens/\(id)")
         UserGardenRef.removeValue()
-        
+        }
     }
     
     
