@@ -8,6 +8,8 @@
 
 import UIKit
 
+//Accepting applications and adding other users to participate in
+// the garden
 class acceptVC: UIViewController {
 
     var acptData : [AcceptData] = []
