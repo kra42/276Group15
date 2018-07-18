@@ -27,7 +27,6 @@
 		BF03A5A420FC8DDB004B58AC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03A5A320FC8DDB004B58AC /* LoginVC.swift */; };
 		BF03A5A620FC8DF0004B58AC /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03A5A520FC8DF0004B58AC /* SignupVC.swift */; };
 		BF58EACE20EB39EE000F239C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF58EACC20EB39EE000F239C /* Model.xcdatamodeld */; };
-		BF58EB0D20EB5194000F239C /* CropCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF58EB0C20EB5194000F239C /* CropCategoryVC.swift */; };
 		BF58EB1120EB6C0F000F239C /* CropProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF58EB1020EB6C0F000F239C /* CropProfileVC.swift */; };
 		BF79375020EAC4DD00A0BB86 /* CropListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF79374F20EAC4DD00A0BB86 /* CropListVC.swift */; };
 		FC1300AB20E9F4FC0006E7E7 /* GardenListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1300A820E9F4FB0006E7E7 /* GardenListVC.swift */; };
@@ -50,6 +49,7 @@
 		FCB0944320E96002005F060A /* GardenShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0944220E96002005F060A /* GardenShareVC.swift */; };
 		FCB489FB20EA972900E33680 /* cropdata.json in Resources */ = {isa = PBXBuildFile; fileRef = FCB489FA20EA972900E33680 /* cropdata.json */; };
 		FCCAAD9420FAD19E0043301A /* CropCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCAAD9320FAD19E0043301A /* CropCreateVC.swift */; };
+		FCCB23F520FECDCB004AB27C /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB23F420FECDCB004AB27C /* CategoryTableViewCell.swift */; };
 		FCE283B220E991F3008AF095 /* CropProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE283B120E991F2008AF095 /* CropProfile.swift */; };
 		FCE283B920E9F22B008AF095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE283B720E9F22B008AF095 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -95,7 +95,6 @@
 		BF03A5A320FC8DDB004B58AC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BF03A5A520FC8DF0004B58AC /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		BF58EACD20EB39EE000F239C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		BF58EB0C20EB5194000F239C /* CropCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropCategoryVC.swift; sourceTree = "<group>"; };
 		BF58EB1020EB6C0F000F239C /* CropProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropProfileVC.swift; sourceTree = "<group>"; };
 		BF79374F20EAC4DD00A0BB86 /* CropListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropListVC.swift; sourceTree = "<group>"; };
 		C87889E77739B6F322046B40 /* Pods_CropBookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CropBookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +126,7 @@
 		FCB0944220E96002005F060A /* GardenShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenShareVC.swift; sourceTree = "<group>"; };
 		FCB489FA20EA972900E33680 /* cropdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cropdata.json; sourceTree = "<group>"; };
 		FCCAAD9320FAD19E0043301A /* CropCreateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropCreateVC.swift; sourceTree = "<group>"; };
+		FCCB23F420FECDCB004AB27C /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		FCE283B120E991F2008AF095 /* CropProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropProfile.swift; sourceTree = "<group>"; };
 		FCE283B820E9F22B008AF095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,11 +212,11 @@
 			children = (
 				FC754B7C20E5C88500302A58 /* CropLibraryVC.swift */,
 				FC53835A20E8BAC5009651E7 /* CropLibrary.swift */,
-				BF58EB0C20EB5194000F239C /* CropCategoryVC.swift */,
 				BB44509B20EC45ED00F2BC99 /* SearchVC.swift */,
 				BB44509D20EC461A00F2BC99 /* CtgysVC.swift */,
 				BB44509F20EC462300F2BC99 /* CtgyTableVC.swift */,
 				BB4450A120EC462D00F2BC99 /* CInfoVC.swift */,
+				FCCB23F420FECDCB004AB27C /* CategoryTableViewCell.swift */,
 			);
 			path = GardenLibrary;
 			sourceTree = "<group>";
@@ -569,10 +569,10 @@
 				FC36AB1220EAAA16006E9916 /* Weather.swift in Sources */,
 				BF58EACE20EB39EE000F239C /* Model.xcdatamodeld in Sources */,
 				BB9D6D0A20FC46B000E94FF5 /* PostData.swift in Sources */,
-				BF58EB0D20EB5194000F239C /* CropCategoryVC.swift in Sources */,
 				BF03A5A620FC8DF0004B58AC /* SignupVC.swift in Sources */,
 				BBE8C60820FED5C700F6C300 /* GardenData.swift in Sources */,
 				FC53835B20E8BAC5009651E7 /* CropInfo.swift in Sources */,
+				FCCB23F520FECDCB004AB27C /* CategoryTableViewCell.swift in Sources */,
 				BB4450A220EC462D00F2BC99 /* CInfoVC.swift in Sources */,
 				FCB0944320E96002005F060A /* GardenShareVC.swift in Sources */,
 				BB47DCAA20FB2CA000EA735D /* Posting.swift in Sources */,

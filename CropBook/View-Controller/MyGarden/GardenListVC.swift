@@ -60,7 +60,7 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var segControl : UISegmentedControl!
     var gardenIndex:Int?
-    var Online:Bool = false;
+    var Online:Bool = false
 
     
     override func viewDidLoad() {
@@ -90,7 +90,11 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
         let passedIndex = sender.tag
         let garden = GardenList[passedIndex]?.gardenName
         let address = GardenList[passedIndex]?.address
+        //Assign Garden inside array with ID
+        
         let gardenID = self.ref.child("Gardens").childByAutoId().key
+        GardenList[passedIndex]?.gardenID=gardenID
+            
         self.ref.child("Gardens/\(gardenID)/gardenName").setValue(garden)
         //self.ref.child("Gardens/\(gardenID)/Crops").setValue()
         self.ref.child("Gardens/\(gardenID)/Address").setValue(address)
@@ -98,8 +102,8 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
         //Save gardenID into the user profile
         guard let userid=Auth.auth().currentUser?.uid else {return}
         let gardenRef=self.ref.child("Users/\(userid)/Gardens").child(gardenID)
-        gardenRef.setValue(gardenID)
-        gardenRef.setValue(["owner?":true])
+        print(gardenID)
+        gardenRef.setValue(true)
     }
     
     //Delete a selected garden
@@ -112,6 +116,8 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
             alert.dismiss(animated:true, completion:nil)
             print("DELETE")
             if self.Online{
+                let gardenID=OnlineGardenList[passedIndex]?.gardenID
+                self.RemoveGardenFromFB(gardenID!)
                 OnlineGardenList.remove(at: passedIndex)
             } else {
                 OfflineGardenList.remove(at: passedIndex)
@@ -124,6 +130,19 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
         }))
         self.present(alert, animated:true, completion:nil)
     }
+    
+    func RemoveGardenFromFB(_ id:String){
+        let GardenRef=ref.child("Gardens/\(id)")
+        GardenRef.removeValue()
+        //remove child with the matching gardenID
+        print("Garden Removed")
+        //remove garden from Users
+        let userid=Auth.auth().currentUser?.uid
+        let UserGardenRef=ref.child("Users/\(userid)/Gardens/\(id)")
+        UserGardenRef.removeValue()
+        
+    }
+    
     
     func GetOnlineGardens(){
         //Create a set of gardenID belongs to user
@@ -150,7 +169,7 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
                         let gardenname=gardenObject?["gardenName"]
                         print(gardenname!)
                         let address=gardenObject?["Address"]
-                        let newGarden=MyGarden(Name: gardenname as! String, Address: address as! String)
+                        let newGarden=MyGarden(Name: gardenname as! String, Address: address as! String, GardenID:garden.key)
                         OnlineGardenList.append(newGarden)
                     }
                 }
@@ -179,6 +198,8 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
         if (segue.identifier == "GardenProfile")  {
             let nextController=segue.destination as!GardenCropList
             nextController.gardenIndex = gardenIndex!
+            nextController.Online=self.Online
+            
         }
     }
 
