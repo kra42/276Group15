@@ -93,8 +93,6 @@ class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             gardenRef.child("CropName").setValue(cropname)
             gardenRef.child("ProfName").setValue(profName)
             print("Crop added")
-            
-            
         }else{
             OfflineGardenList[gardenIndex]?.cropProfile.append(newCropProf)
         }

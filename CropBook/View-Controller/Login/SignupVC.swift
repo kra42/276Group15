@@ -43,6 +43,12 @@ class SignupVC: UIViewController {
                 
             }else{
                 print("Error : \(error!.localizedDescription)")
+                let alert = UIAlertController(title: "Inavlid Username/Password", message: "Password must be at least 6 Characters", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { (action) in
+                    alert.dismiss(animated:true, completion:nil)
+                }))
+
+                self.present(alert, animated:true, completion:nil)
             }
             
         }

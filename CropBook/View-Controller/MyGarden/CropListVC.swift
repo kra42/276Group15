@@ -35,49 +35,54 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
         cell.deleteButton.tag = indexPath.row
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
         performSegue(withIdentifier: "CropProfileSegue", sender: self)
         
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 120.0
-        //self.navigationItem.setHidesBackButton(true, animated:true);
+        self.tableView.backgroundColor = UIColor(red: 248.0/255.0, green: 1, blue: 210/255, alpha:1)
+
         // Do any additional setup after loading the view.
+        self.myGarden = GardenList[gardenIndex]
+        if self.Online! {
+            //remove all crop before loading from firebase
+            self.myGarden.cropProfile.removeAll()
+            //retrieve Crops from the Firebase
+            let gardenID = self.myGarden.gardenID
+            let GardenRef = ref.child("Gardens/\(gardenID!)/CropList")
+            GardenRef.observe(.value, with: {(snapshot) in
+                for child in snapshot.children.allObjects as![DataSnapshot]{
+                    let cropObject=child.value as? [String:AnyObject]
+                    let cropname=cropObject?["CropName"]
+                    let profname=cropObject?["ProfName"]
+                    let cropinfo=lib.searchByName(cropName: cropname as! String)
+                    let newCrop=CropProfile(cropInfo: cropinfo!, profName: cropname as! String)
+                    newCrop.cropID=child.key
+                    print(child.key)
+                    self.myGarden.AddCrop(New: newCrop)
+                }
+                self.tableView.reloadData()
+            })
+        }
+    }
+    
+    func dataRetrieval() {
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.myGarden = GardenList[gardenIndex]
-        //remove all crop before loading from firebase
-        self.myGarden.cropProfile.removeAll()
-        //retrieve Crops from the Firebase
-        let gardenID = self.myGarden.gardenID
-        let GardenRef = ref.child("Gardens/\(gardenID!)/CropList")
-        GardenRef.observe(.value, with: {(snapshot) in
-            for child in snapshot.children.allObjects as![DataSnapshot]{
-                
-                let cropObject=child.value as? [String:AnyObject]
-                let cropname=cropObject?["CropName"]
-                let profname=cropObject?["ProfName"]
-                let cropinfo=lib.searchByName(cropName: cropname as! String)
-                let newCrop=CropProfile(cropInfo: cropinfo!, profName: cropname as! String)
-                newCrop.cropID=child.key
-                print(child.key)
-                self.myGarden.AddCrop(New: newCrop)
-            }
-            
-            
-         self.tableView.reloadData()
-            
-        })
-    
+        self.tableView.reloadData()
+
+        
         self.title = myGarden?.gardenName;
         print("Number of Crops = ", myGarden!.getSize())
-        
     }
     
     //Delete a selected garden
@@ -89,10 +94,11 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
             alert.dismiss(animated:true, completion:nil)
             print("DELETE")
-            //
             
-            let cropid=self.myGarden.cropProfile[passedIndex].cropID
-            self.RemoveCropFromFB(cropid!)
+            if self.myGarden.getOnlineState(){
+                let cropid=self.myGarden.cropProfile[passedIndex].cropID
+                self.RemoveCropFromFB(cropid!)
+            }
             
             self.myGarden.cropProfile.remove(at: passedIndex)
             self.tableView.reloadData()
@@ -102,8 +108,6 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
             print("no delete")
         }))
         self.present(alert, animated:true, completion:nil)
-        
-        
     }
     
     func RemoveCropFromFB(_ id:String){
@@ -111,7 +115,6 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
         let CropRef=ref.child("Gardens/\(gardenID)/CropList/\(id)")
         CropRef.removeValue()
         print("Removed!")
-        
     }
     
     override func didReceiveMemoryWarning() {
