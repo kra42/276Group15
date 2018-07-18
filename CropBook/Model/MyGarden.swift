@@ -10,7 +10,7 @@ import Foundation
 
 class MyGarden{
     
-    var gardenID:UInt32
+    var gardenID:String?
     var cropProfile=[CropProfile]()
     var gardenName:String
     var owner:Int?
@@ -21,7 +21,13 @@ class MyGarden{
     init(Name name:String,Address address:String) {
         self.gardenName=name
         self.address=address
-        self.gardenID=arc4random_uniform(100)
+        
+    }
+    
+    init(Name name:String,Address address:String,GardenID id:String) {
+        self.gardenName=name
+        self.address=address
+        self.gardenID=id
     }
     
     func AddCrop(New Crop:CropProfile)->Int{       //return position in array

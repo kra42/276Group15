@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 
 class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource {
@@ -17,6 +17,9 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     var myIndex=0
     var gardenIndex = 0
     var myGarden: MyGarden!
+    var Online:Bool?
+    let ref=Database.database().reference()
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return(myGarden!.cropProfile.count)
@@ -28,7 +31,7 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
         let name: String? = myGarden?.cropProfile[indexPath.row].cropName
         cell.cropLabel?.text = name
         cell.cropImage?.image = UIImage(named: (myGarden?.cropProfile[indexPath.row].getImage())!)
-        cell.deleteButton.addTarget(self, action: #selector(GardenInterface.deleteGarden), for: .touchUpInside)
+        cell.deleteButton.addTarget(self, action: #selector(GardenCropList.deleteCrop), for: .touchUpInside)
         cell.deleteButton.tag = indexPath.row
         return cell
     }
@@ -49,13 +52,36 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.myGarden = GardenList[gardenIndex]
+        //remove all crop before loading from firebase
+        self.myGarden.cropProfile.removeAll()
+        //retrieve Crops from the Firebase
+        let gardenID = self.myGarden.gardenID
+        let GardenRef = ref.child("Gardens/\(gardenID!)/CropList")
+        GardenRef.observe(.value, with: {(snapshot) in
+            for child in snapshot.children.allObjects as![DataSnapshot]{
+                
+                let cropObject=child.value as? [String:AnyObject]
+                let cropname=cropObject?["CropName"]
+                let profname=cropObject?["ProfName"]
+                let cropinfo=lib.searchByName(cropName: cropname as! String)
+                let newCrop=CropProfile(cropInfo: cropinfo!, profName: cropname as! String)
+                newCrop.cropID=child.key
+                print(child.key)
+                self.myGarden.AddCrop(New: newCrop)
+            }
+            
+            
+         self.tableView.reloadData()
+            
+        })
+    
         self.title = myGarden?.gardenName;
         print("Number of Crops = ", myGarden!.getSize())
-        self.tableView.reloadData()
+        
     }
     
     //Delete a selected garden
-    @objc func deleteGarden(sender: UIButton){
+    @objc func deleteCrop(sender: UIButton){
         let passedIndex = sender.tag
         
         let alert = UIAlertController(title: "Remove Crop from Garden?", message: myGarden.cropProfile[passedIndex].GetCropName(), preferredStyle: UIAlertControllerStyle.alert)
@@ -63,6 +89,11 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
             alert.dismiss(animated:true, completion:nil)
             print("DELETE")
+            //
+            
+            let cropid=self.myGarden.cropProfile[passedIndex].cropID
+            self.RemoveCropFromFB(cropid!)
+            
             self.myGarden.cropProfile.remove(at: passedIndex)
             self.tableView.reloadData()
         }))
@@ -74,7 +105,15 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         
     }
-
+    
+    func RemoveCropFromFB(_ id:String){
+        let gardenID=myGarden.gardenID
+        let CropRef=ref.child("Gardens/\(gardenID)/CropList/\(id)")
+        CropRef.removeValue()
+        print("Removed!")
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -85,9 +124,11 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
             let receiverVC = segue.destination as! CropProfileViewController
             receiverVC.gardenIndex = self.gardenIndex
             receiverVC.myIndex = self.myIndex
+            
         }else if segue.identifier == "createCrop"{
             let receiverVC = segue.destination as! CropCreateVC
             receiverVC.gardenIndex = gardenIndex
+            receiverVC.Online = self.Online
         }
     }
 }

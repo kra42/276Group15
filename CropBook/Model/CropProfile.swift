@@ -5,6 +5,7 @@ import UIKit
 class CropProfile{
     
     //varaibles for crop attributes
+    var cropID : String?
     var cropName : String
     var profName : String
     var cropType : String
@@ -31,7 +32,7 @@ class CropProfile{
         self.notif = Notifications()
     }
     
-    init (cropInfo : CropInfo, cropName : String){
+    init (cropInfo : CropInfo, profName : String){
         self.cropName = cropInfo.getName()
         self.profName = cropName
         self.cropType = cropInfo.getType()
