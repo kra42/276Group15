@@ -65,7 +65,7 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        self.tableView.backgroundColor = UIColor(red: 248.0/255.0, green: 1, blue: 210/255, alpha:1)
         self.tableView.rowHeight = 120.0
         // Do any additional setup after loading the view.
         

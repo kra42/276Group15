@@ -17,7 +17,10 @@ class CtgyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fruitButton.layer.cornerRadius = 7;
+        veggieButton.layer.cornerRadius = 7;
+        wheatButton.layer.cornerRadius = 7;
+        allButton.layer.cornerRadius = 7;
         // Do any additional setup after loading the view.
     }
 
