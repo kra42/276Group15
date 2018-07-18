@@ -65,45 +65,59 @@ class GardenInterface: UIViewController, UITableViewDelegate,UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        self.tableView.backgroundColor = UIColor(red: 248.0/255.0, green: 1, blue: 210/255, alpha:1)
         self.tableView.rowHeight = 120.0
         // Do any additional setup after loading the view.
         
 
     }
-        override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
-        if GardenList.count>0{
-            emptyGardenLabel.isHidden=true
-        }else {
-            emptyGardenLabel.isHidden=false
-        }
+
    
     }
     
     @objc func postGarden(sender: UIButton){
-        print("Posting")
+        
         //Write Garden into Firebase
         
-        //Assign Attribute into garden
         let passedIndex = sender.tag
-        let garden = GardenList[passedIndex]?.gardenName
-        let address = GardenList[passedIndex]?.address
         //Assign Garden inside array with ID
-        
-        let gardenID = self.ref.child("Gardens").childByAutoId().key
-        GardenList[passedIndex]?.gardenID=gardenID
+        if !(OfflineGardenList[passedIndex]?.getOnlineState())! {
+            print("Posting")
+            OfflineGardenList[passedIndex]?.setIsOnline(state: true)
+            //Assign Attribute into garden
+            let garden = GardenList[passedIndex]?.gardenName
+            let address = GardenList[passedIndex]?.address
+            let gardenID = self.ref.child("Gardens").childByAutoId().key
+            OfflineGardenList[passedIndex]?.gardenID=gardenID
             
-        self.ref.child("Gardens/\(gardenID)/gardenName").setValue(garden)
-        //self.ref.child("Gardens/\(gardenID)/Crops").setValue()
-        self.ref.child("Gardens/\(gardenID)/Address").setValue(address)
-        
-        //Save gardenID into the user profile
-        guard let userid=Auth.auth().currentUser?.uid else {return}
-        let gardenRef=self.ref.child("Users/\(userid)/Gardens").child(gardenID)
-        print(gardenID)
-        gardenRef.setValue(true)
+            self.ref.child("Gardens/\(gardenID)/gardenName").setValue(garden)
+            //self.ref.child("Gardens/\(gardenID)/Crops").setValue()
+            self.ref.child("Gardens/\(gardenID)/Address").setValue(address)
+            
+            //Save gardenID into the user profile
+            guard let userid=Auth.auth().currentUser?.uid else {return}
+            let gardenRef=self.ref.child("Users/\(userid)/Gardens").child(gardenID)
+            print(gardenID)
+            gardenRef.setValue(true)
+            
+            if let numOfCrops = OfflineGardenList[passedIndex]?.getSize() {
+                print("Adding Crops")
+                for i in 0..<numOfCrops{
+                    //let gardenID=GardenList[gardenIndex]?.gardenID
+                    let cropname = OfflineGardenList[passedIndex]?.cropProfile[i].GetCropName()
+                    let profName = OfflineGardenList[passedIndex]?.cropProfile[i].profName
+                    let cropRef=self.ref.child("Gardens/\(gardenID)/CropList").childByAutoId()
+                    cropRef.child("CropName").setValue(cropname)
+                    cropRef.child("ProfName").setValue(profName)
+                    print("Crop added")
+                }
+            }
+        } else {
+            print("Garden Already Posted")
+        }
     }
     
     //Delete a selected garden

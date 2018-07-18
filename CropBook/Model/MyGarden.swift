@@ -17,17 +17,26 @@ class MyGarden{
     var gardenUserID:String?
     var address:String?	
     var dailyCompletion:Bool?
-
+    var isOnline:Bool?
     init(Name name:String,Address address:String) {
         self.gardenName=name
         self.address=address
-        
+        self.isOnline = false
     }
     
     init(Name name:String,Address address:String,GardenID id:String) {
         self.gardenName=name
         self.address=address
         self.gardenID=id
+        self.isOnline = false
+    }
+    
+    func setIsOnline(state: Bool){
+        self.isOnline = state;
+    }
+    
+    func getOnlineState()->Bool{
+        return self.isOnline!
     }
     
     func AddCrop(New Crop:CropProfile)->Int{       //return position in array
