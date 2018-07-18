@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
@@ -9,12 +10,14 @@ class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     @IBOutlet weak var createCrop: UIButton!
     
+    let ref=Database.database().reference()
     var isTableVisible = false
     var mainLib = lib.getMainLibrary()
     var profName = ""
     var cropSelected = false
     var libIndex = 0
     var gardenIndex = 0;
+    var Online:Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,9 +82,23 @@ class CropCreateVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBAction func AddCrop(_ sender: Any) {
         print("ADDING CROP");
 
-        profName = cropNameField.text!
-        let newCropProf = CropProfile(cropInfo : mainLib[libIndex], cropName : profName)
-        GardenList[gardenIndex]?.cropProfile.append(newCropProf)
+        let profName = cropNameField.text!
+        let newCropProf = CropProfile(cropInfo : mainLib[libIndex], profName : profName)
+        
+        if(Online)!{
+            //add Crop into Firebase Database
+            let gardenID=OnlineGardenList[gardenIndex]?.gardenID
+            let cropname=newCropProf.GetCropName()
+            let gardenRef=ref.child("Gardens/\(gardenID!)/CropList").childByAutoId()
+            gardenRef.child("CropName").setValue(cropname)
+            gardenRef.child("ProfName").setValue(profName)
+            print("Crop added")
+            
+            
+        }else{
+            OfflineGardenList[gardenIndex]?.cropProfile.append(newCropProf)
+        }
+        
         self.navigationController?.popViewController(animated: true)
     }
     
