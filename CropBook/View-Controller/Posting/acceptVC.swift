@@ -24,4 +24,7 @@ class acceptVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func acceptPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindAccept", sender: self)
+    }
 }
