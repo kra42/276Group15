@@ -14,7 +14,7 @@ class Posting{
     var postRef : DatabaseReference
     var description : String
     var gardenRef : String
-    var poster : String
+    var harvest : String
     var crops : [String]
     
     //var postDescription : String
@@ -30,7 +30,7 @@ class Posting{
         self.postRef = Database.database().reference()
         self.description = ""
         self.gardenRef = ""
-        self.poster = ""
+        self.harvest = ""
         self.crops = [String]()
     }
     
@@ -50,8 +50,8 @@ class Posting{
         self.gardenRef = gardenRef
     }
     
-    func setPoster(poster : String) {
-        self.poster = poster
+    func setHarvest(harvest : String) {
+        self.harvest = harvest
     }
     
     func setCrops(cropNames : [String]){
@@ -73,8 +73,8 @@ class Posting{
         return self.gardenRef
     }
     
-    func getPoser() -> String{
-        return self.poster
+    func getHarvest() -> String{
+        return self.harvest
     }
     
     func getCrops() -> [String] {
