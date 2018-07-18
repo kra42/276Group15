@@ -10,6 +10,9 @@
 		6370D0A2BFBA88F044FEB450 /* Pods_CropBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544522F1BEA5DB6E81A743B /* Pods_CropBook.framework */; };
 		868EBD73556965D2762897CA /* Pods_CropBookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87889E77739B6F322046B40 /* Pods_CropBookUITests.framework */; };
 		B2FAC022047BA62CFD1EB4DC /* Pods_CropBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D285FA043AB962FD55CB7 /* Pods_CropBookTests.framework */; };
+		BB42B6EA20FF51CF000ECC18 /* ApplyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42B6E920FF51CF000ECC18 /* ApplyVC.swift */; };
+		BB42B6EE20FF717E000ECC18 /* YourPostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42B6ED20FF717E000ECC18 /* YourPostsVC.swift */; };
+		BB42B6F020FF73B9000ECC18 /* UserPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42B6EF20FF73B9000ECC18 /* UserPost.swift */; };
 		BB44509C20EC45EE00F2BC99 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB44509B20EC45ED00F2BC99 /* SearchVC.swift */; };
 		BB44509E20EC461A00F2BC99 /* CtgysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB44509D20EC461A00F2BC99 /* CtgysVC.swift */; };
 		BB4450A020EC462300F2BC99 /* CtgyTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB44509F20EC462300F2BC99 /* CtgyTableVC.swift */; };
@@ -19,6 +22,7 @@
 		BB9D6D0A20FC46B000E94FF5 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D6D0920FC46B000E94FF5 /* PostData.swift */; };
 		BBC5B55E20F9BC5000DD422E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBC5B55D20F9BC5000DD422E /* GoogleService-Info.plist */; };
 		BBC6990620F9CD0600F40BE5 /* ComposeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC6990520F9CD0600F40BE5 /* ComposeVC.swift */; };
+		BBE8C60820FED5C700F6C300 /* GardenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8C60720FED5C700F6C300 /* GardenData.swift */; };
 		BF03A5A220FC8DAF004B58AC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03A5A120FC8DAF004B58AC /* MainVC.swift */; };
 		BF03A5A420FC8DDB004B58AC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03A5A320FC8DDB004B58AC /* LoginVC.swift */; };
 		BF03A5A620FC8DF0004B58AC /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03A5A520FC8DF0004B58AC /* SignupVC.swift */; };
@@ -74,6 +78,9 @@
 		69055525CC2D6B3D523DA96E /* Pods-CropBookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropBookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CropBookUITests/Pods-CropBookUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8692812832D2EB3E42968DF7 /* Pods-CropBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropBookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CropBookTests/Pods-CropBookTests.release.xcconfig"; sourceTree = "<group>"; };
 		9544522F1BEA5DB6E81A743B /* Pods_CropBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CropBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB42B6E920FF51CF000ECC18 /* ApplyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyVC.swift; sourceTree = "<group>"; };
+		BB42B6ED20FF717E000ECC18 /* YourPostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourPostsVC.swift; sourceTree = "<group>"; };
+		BB42B6EF20FF73B9000ECC18 /* UserPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPost.swift; sourceTree = "<group>"; };
 		BB44509B20EC45ED00F2BC99 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		BB44509D20EC461A00F2BC99 /* CtgysVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CtgysVC.swift; sourceTree = "<group>"; };
 		BB44509F20EC462300F2BC99 /* CtgyTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CtgyTableVC.swift; sourceTree = "<group>"; };
@@ -83,6 +90,7 @@
 		BB9D6D0920FC46B000E94FF5 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		BBC5B55D20F9BC5000DD422E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBC6990520F9CD0600F40BE5 /* ComposeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeVC.swift; sourceTree = "<group>"; };
+		BBE8C60720FED5C700F6C300 /* GardenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenData.swift; sourceTree = "<group>"; };
 		BF03A5A120FC8DAF004B58AC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		BF03A5A320FC8DDB004B58AC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BF03A5A520FC8DF0004B58AC /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
@@ -219,6 +227,8 @@
 				FCB0944220E96002005F060A /* GardenShareVC.swift */,
 				BBC6990520F9CD0600F40BE5 /* ComposeVC.swift */,
 				BB47DCA720FB2BF100EA735D /* PostVC.swift */,
+				BB42B6E920FF51CF000ECC18 /* ApplyVC.swift */,
+				BB42B6ED20FF717E000ECC18 /* YourPostsVC.swift */,
 			);
 			path = Posting;
 			sourceTree = "<group>";
@@ -247,6 +257,8 @@
 				FC53835520E883EF009651E7 /* Notifications.swift */,
 				BB47DCA920FB2CA000EA735D /* Posting.swift */,
 				BB9D6D0920FC46B000E94FF5 /* PostData.swift */,
+				BBE8C60720FED5C700F6C300 /* GardenData.swift */,
+				BB42B6EF20FF73B9000ECC18 /* UserPost.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -539,6 +551,7 @@
 				FC1300AD20E9F4FC0006E7E7 /* MyGarden.swift in Sources */,
 				FC53835820E8BAB6009651E7 /* Coefficients.swift in Sources */,
 				BF03A5A420FC8DDB004B58AC /* LoginVC.swift in Sources */,
+				BB42B6EE20FF717E000ECC18 /* YourPostsVC.swift in Sources */,
 				BF79375020EAC4DD00A0BB86 /* CropListVC.swift in Sources */,
 				FCCAAD9420FAD19E0043301A /* CropCreateVC.swift in Sources */,
 				BF03A5A220FC8DAF004B58AC /* MainVC.swift in Sources */,
@@ -557,6 +570,7 @@
 				BF58EACE20EB39EE000F239C /* Model.xcdatamodeld in Sources */,
 				BB9D6D0A20FC46B000E94FF5 /* PostData.swift in Sources */,
 				BF03A5A620FC8DF0004B58AC /* SignupVC.swift in Sources */,
+				BBE8C60820FED5C700F6C300 /* GardenData.swift in Sources */,
 				FC53835B20E8BAC5009651E7 /* CropInfo.swift in Sources */,
 				FCCB23F520FECDCB004AB27C /* CategoryTableViewCell.swift in Sources */,
 				BB4450A220EC462D00F2BC99 /* CInfoVC.swift in Sources */,
@@ -564,9 +578,11 @@
 				BB47DCAA20FB2CA000EA735D /* Posting.swift in Sources */,
 				FC754B7920E5C88500302A58 /* AppDelegate.swift in Sources */,
 				BF58EB1120EB6C0F000F239C /* CropProfileVC.swift in Sources */,
+				BB42B6EA20FF51CF000ECC18 /* ApplyVC.swift in Sources */,
 				FC66DD1720FD99A800FBD2B1 /* CropTableViewCell.swift in Sources */,
 				BBC6990620F9CD0600F40BE5 /* ComposeVC.swift in Sources */,
 				BB4450A020EC462300F2BC99 /* CtgyTableVC.swift in Sources */,
+				BB42B6F020FF73B9000ECC18 /* UserPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

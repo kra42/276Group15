@@ -11,22 +11,31 @@ import Foundation
 class PostData{
     var postId : String
     var postTitle : String
-    
+    var gardenId : String
     init(){
         self.postId = ""
         self.postTitle = ""
-        
+        self.gardenId = ""
     }
-    init(postId  : String, postTitle : String){
+    init(postId  : String, postTitle : String, gardenId : String){
         self.postId = postId
         self.postTitle = postTitle
+        self.gardenId = gardenId
+    }
+    
+    func getGdnId() -> String{
+        return self.gardenId
     }
     
     func getGardenId() -> String{
         return self.postId
     }
     
-    func getUserRole() -> String{
+    func getTitle() -> String{
         return self.postTitle
+    }
+    
+    func setGardenId(gardenId : String){
+        self.gardenId = gardenId
     }
 }
