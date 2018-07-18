@@ -23,14 +23,16 @@ class CtgyTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CategoryTableViewCell
         var selectedLib = ctgyLib
-        cell.textLabel?.text = selectedLib[indexPath.row].getName()
- 
+        cell.cropLabel?.text = selectedLib[indexPath.row].getName()
+        cell.cropImage?.image = UIImage(named: selectedLib[indexPath.row].getImage())
+        tableView.rowHeight = 120.0
+        tableView.backgroundColor = UIColor(red: 248.0/255.0, green: 1, blue: 210/255, alpha:1)
         // Configure the cell...
         return cell
     }
+    
     
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
