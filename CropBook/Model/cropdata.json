@@ -1,37 +1,37 @@
 [
+
+ 
  {
  "cropName": "Apples",
  "coEfficients": {
- "init": 0.70,
- "mid": 1.00,
+ "init": 0.7,
+ "mid": 1.0,
  "end": 0.75
  },
  "Type": "Fruit",
- "Image": "Apples.jpeg”,
+ "Image": "Apple.jpeg",
  "sunExposure": "Sun/Partial Shade",
  "soilType": "Any",
- "soilpH": "Slightly Acidic/Neutral",
+ "soilpH": "Slightly Acidic to Neutral",
  "plant" : "Plant in mid-fall or early winter when it's not too cold for a little root growth to help them establish. Should be planted with at least one other apple tree which flowers at a similar time to aid pollination.",
  "feeding" : "Not required",
- "spacing" : "Single Plants: (5.00m) each way (minimum)
- "Rows: (5.00m) with (5.00m) row gap (minimum)",
- "notes" : "Prune towards the end of the season to remove any dead or overcrowded branches and to shape if required.
- 
- ",
+ "spacing" : "Single Plants: 5.00m each way (minimum) Rows: (5.00m) with (5.00m) row gap (minimum)",
+ "notes" : "Prune towards the end of the season to remove any dead or overcrowded branches and to shape if required.",
  "harvesting" : "Harvest when ripe (70% red in color)"
  },
+ 
  
  {
  "cropName": "Artichokes",
  "coEfficients": {
  "init": 0.5,
- "mid": 1.00,
- "end": 0.80
+ "mid": 1.0,
+ "end": 0.8
  },
  "Type": "Vegetable",
- "Image": "Artichokes.jpeg”,
+ "Image": "Artichoke.jpeg",
  "sunExposure": "Full Sun",
- "soilType": "Loamy, Sandy",
+ "soilType": "Loamy and sandy",
  "soilpH": "Neutral",
  "plant" : "Sow in spring is colder regions; sow in fall in warm subtropical regions. May wish to start 8 weeks indoors",
  "feeding" : "Keep well fed with liquid feed through midsummer. Feed less when plants begin to produce buds.",
@@ -39,6 +39,7 @@
  "notes" : "Need plenty of water, so mulch generously to keep the soil cool and moist.",
  "harvesting" : "Use a sharp knife to cut the heads (flower buds) with 2 inches of stem attached while they are still closed or justly slightly opening."
  },
+ 
  
  {
  "cropName": "Asparagus",
@@ -49,7 +50,7 @@
  },
  "Type": "Vegetable",
  "Image": "Asparagus.jpeg",
- "sunExposure": "Full Sun/Part Shade",
+ "sunExposure": "Full Sun",
  "soilType": "Sandy, Fertile, well drained, and free of persistent weeds",
  "soilpH": "Slightly Acidic to Neutral",
  "plant" : "Set out dormant 1-year old roots, called crowns, in late winter or early spring. A few varieties can be grown from seed.",
@@ -58,6 +59,47 @@
  "notes" : "After the stems die back in early winter, cut them off at ground level and compost them. Remove weeds, apply compost and mulch, and your yearly maintenance is done.",
  "harvesting" : "Begin gathering spears the second year after planting, cutting all spears that appear for a month in early spring. In subsequent years, harvest for 6 weeks each spring."
  },
+ 
+ 
+ {
+ "cropName": "Barley",
+ "coEfficients": {
+ "init": 0.3,
+ "mid": 1.15,
+ "end": 0.4
+ },
+ "Type": "Cereal",
+ "Image": "Barley.jpeg",
+ "sunExposure": "Full Sun",
+ "soilType": "Well Drained",
+ "soilpH": "Acidic",
+ "plant" : "For winter barley, October is the best time to plant. For spring barley, plant in January.",
+ "feeding" : "Regular compost",
+ "spacing" : "Sow the seeds in the rows, ensuring that there are 20 to 25 seeds per square foot of space.",
+ "notes" : "Barley does not require too much watering. Too much watering can lead to decomposition.",
+ "harvesting" : "Barley is harvested the same as wheat: cut, bundled and shocked to dry. Wear a shirt when harvesting barley as the awns can irritate your skin. Barley may be stored in the bundle and fed to stock without threshing. "
+ },
+ 
+ 
+ {
+ "cropName": "Beans",
+ "coEfficients": {
+ "init": 0.5,
+ "mid": 1.05,
+ "end": 0.9
+ },
+ "Type": "Vegetable",
+ "Image": "Beans.jpeg",
+ "sunExposure": "Full sun to very light shade.",
+ "soilType": "Regular, well drained soil.",
+ "soilpH": "Slightly Acidic",
+ "plant" : "Plant seeds 2 inches deep and 6 inches apart in late spring, after the last frost has passed and the soil is warm. Install a sturdy trellis before you plant your pole beans.",
+ "feeding" : "Mix an organic fertilizer into the soil before planting, using rates given on the label. Supplemental fertilizer seldom required.",
+ "spacing" : "Single Plants: (25cm) each way (minimum) Rows: (15cm) with (35cm) row gap (minimum)",
+ "notes" : "Mulch to keep the soil cool and moist, and to reduce problems with weeds.",
+ "harvesting" : "Gather pods before they fill with seeds. When picked often, pole beans continue to produce all summer."
+ },
+ 
  
  {
  "cropName": "Beets",
@@ -76,8 +118,8 @@
  "spacing" : "Single: Plants(15cm) each way (minimum) Rows:(10cm) with (20cm) row gap (minimum)",
  "notes" :  "Each seed is actually a multi-celled capsule, so you may need small scissors to thin plants to proper spacing. Weed carefully, and mulch between plants to deter weeds. Baby beet greens often are included in salad mixes.",
  "harvesting" : "Harvest young leaves for salad greens as you thin young plants. Pull roots when they become plump. To keep through winter, harvest plants, cut off the tops, and keep in a cool root cellar or refrigerator."
- 
  },
+ 
  
  {
  "cropName": "Blueberries",
@@ -98,6 +140,7 @@
  "harvesting" : "Harvest fruit when ripe."
  },
  
+ 
  {
  "cropName": "Broccoli",
  "coEfficients": {
@@ -117,6 +160,8 @@
  "harvesting" : "Use a sharp knife to harvest the primary head when the beads are plump and well-filled. Many varieties produce numerous smaller side shoots after the primary head is cut."
  },
  
+ 
+ {
  "cropName": "Brussel Sprouts",
  "coEfficients": {
  "init": 0.7,
@@ -125,15 +170,17 @@
  },
  "Type": "Vegetable",
  "Image": "BrusselSprouts.jpeg",
- "sunExposure": "Full Sun",
- "soilType": "Fertile, well-drained",
- "soilpH": "Neutral",
- "plant" : "Plant in early spring, or mid-to late summer, matures in the fall",
- "feeding" : "Add boron to the soil by dissolving 1 level tablespoon of borax in 5 quarts of water and sprinkling it evenly over 50 square feet of bed",
- "spacing" : "Single Plants: (20cm) each way (minimum) Rows: (20cm) with (30cm) row gap (minimum)",
- "notes" : "Full-grown sprouts stays intact on the plant in cold weather, making them a great winter harvest item",
- "harvesting" : "Remove sprouts by twisting them until they break away from the plant."
+ "sunExposure": "Full sun.",
+ "soilType": "Rich, deep soil, firm with organic compost.",
+ "soilpH": "Slightly Acidic",
+ "plant" : "Start indoors in early spring and set plants out when they have 5 or more leaves.",
+ "feeding" : "Mix a high-nitrogen compost into the soil before planting.",
+ "spacing" : "Single Plants: (60cm) each way (minimum) Rows: (60cm) with (60cm) row gap (minimum)",
+ "notes" : "Under the coldest conditions, colonies of gray-green cabbage aphids can seriously infest plants. Control early outbreaks with insecticidal soap.",
+ "harvesting" : "Harvest from the bottom of the plant upward, twisting off sprouts that are larger than a marble. Removing nearby leaves helps to make room for growing sprouts."
  },
+ 
+ 
  {
  "cropName": "Cabbage",
  "coEfficients": {
@@ -152,6 +199,7 @@
  "notes" : " Try growing different varieties from seed to explore differences in leaf color and type. Most early-maturing cabbage varieties produce smallish heads.",
  "harvesting" : "Cut heads when they reach the size you prefer. Small secondary heads often grow from the base of early cabbage plants after the primary head is cut."
  },
+ 
  
  {
  "cropName": "Carrots",
@@ -172,6 +220,7 @@
  "harvesting" : "Can be harvested over a long period, but the longer plants are left in the ground, the more likely they are to be injured by insects or animals."
  },
  
+ 
  {
  "cropName": "Cauliflower",
  "coEfficients": {
@@ -191,6 +240,7 @@
  "harvesting" : "Harvest when the head has fully developed, but before the curd becomes loose, with a ricey appearance."
  },
  
+ 
  {
  "cropName": "Celery",
  "coEfficients": {
@@ -208,8 +258,8 @@
  "spacing" : "Single Plants: (20cm) each way (minimum) Rows: (15cm) with (30cm) row gap (minimum)",
  "notes" :  "Garden-grown celery is looser and darker green than the supermarket version, with much more intense flavor. Provide water as needed to the soil moist in dry weather.",
  "harvesting" : "Cut individual stalks as needed in the kitchen, or pull entire plants."
- 
  },
+ 
  
  {
  "cropName": "Corn",
@@ -230,6 +280,7 @@
  "harvesting" : "Sweet corn is ready when the ears feel firm and full when grasped, and a test kernel pierced with a fingernail released milky juice. Harvest in the morning, and promptly refrigerate ears to help them hold their delicate sugars."
  },
  
+ 
  {
  "cropName": "Cucumber",
  "coEfficients": {
@@ -248,6 +299,47 @@
  "notes" : "Use a trellis to save space, or you can let cucumbers ramble over mulched ground.",
  "harvesting" : "Pick cucumbers at least every other day by snipping them from the vine with pruning shears. Many varieties are extremely productive. Fruits with hard seeds inside are overripe."
  },
+ 
+ 
+ {
+ "cropName": "Eggplants",
+ "coEfficients": {
+ "init": 0.6,
+ "mid": 1.15,
+ "end": 0.8
+ },
+ "Type": "Vegetable",
+ "Image": "Eggplants.jpeg",
+ "sunExposure": "Full Sun",
+ "soilType": "Warm, fertile, and well drained.",
+ "soilpH": "Slightly Acidic",
+ "plant" : "Sow indoors 6 weeks before last spring frost, or buy seedlings in late spring. Transplant to larger pots if needed. Plant out in late spring, when the weather is settled and warm.",
+ "feeding" : "From midsummer onward, drench with a liquid feed every two weeks.",
+ "spacing" : "Single Plants: (40cm) each way (minimum)Rows: (35cm) with (45cm) row gap (minimum)",
+ "notes" : "Stake plants to keep them from falling over when they become heavy with fruit. Mulch to keep soil lightly moist.",
+ "harvesting" : "Use pruning shears to cut fruits from the stem. Perfect fruits have shiny skins and only a few immature seeds inside."
+ },
+ 
+ 
+ {
+ "cropName": "Garlic",
+ "coEfficients": {
+ "init": 0.7,
+ "mid": 1.00,
+ "end": 0.7
+ },
+ "Type": "Vegetable",
+ "Image": "Garlic.jpeg",
+ "sunExposure": "Sunny",
+ "soilType": "Fertile, well-drained soil with organic compost.",
+ "soilpH": "Slightly Acidic",
+ "plant" : "In fall, plant individual cloves 4 inches deep with the pointed ends up. Cover the planting with at least 3 inches of mulch.",
+ "feeding" : "Not usually required.",
+ "spacing" : "Single Plants: (15cm) each way (minimum) Rows: (10cm) with (25cm) row gap (minimum)",
+ "notes" : "Use hardy Rocambole types in cold climates. Where winters are mild, grow heavy-yielding artichoke types. Among the most deer-resistant of all edibles.",
+ "harvesting" : "Dig up bulbs in summer when one third of the leaves become dry and lose their green color. Shake off soil, and cure whole plants dry in a warm, shady place for two weeks before trimming and storing the garlic bulbs."
+ },
+ 
  
  {
  "cropName": "Green onions",
@@ -268,6 +360,27 @@
  "harvesting" : "Pull individual plants as you need them in the kitchen. With perennial bunching varieties, lift clumps in spring or fall and replant some of the divisions."
  },
  
+ 
+ {
+ "cropName": "Kiwi",
+ "coEfficients": {
+ "init": 0.4,
+ "mid": 1.05,
+ "end": 1.05
+ },
+ "Type": "Fruit",
+ "Image": "Kiwi.jpeg",
+ "sunExposure": "Kiwis thrive in full sun provided their roots receive midday shade. It is a deciduous climber that prefers a temperate climate.It will survive mild frosts but won’t do well in hot summers.",
+ "soilType": "Fertile, well-drained soil.",
+ "soilpH": "",
+ "plant" : "Start with a purchased plant, or start seeds indoors and set out at about the time of your last frost. Mint is also easy to root from stem tip cuttings stuck into moist potting soil. Some strains are propagated only from cuttings rather than seeds.",
+ "feeding" : "Not generally needed.",
+ "spacing" : "Single Plants: 3.00m each way (minimum) Rows: 3.00m with 3.00m row gap (minimum)",
+ "notes" :  "FMost kiwi varieties require both male and female plants for successful pollination. One male plant can pollinate up to eight nearby females. Hardy kiwis produce smaller fruits, but are usually self fertile.",
+ "harvesting" : "Pick before the first frosts and then ripen indoors if the fruit is not completely ripe."
+ },
+ 
+ 
  {
  "cropName": "Lettuce",
  "coEfficients": {
@@ -286,6 +399,47 @@
  "notes" : "As lettuce seedlings grow, thin them so that the leaves of adjoining plants do not overlap. Mulch open space between plants to retain soil moisture and prevent weeds.",
  "harvesting" : "You can pick individual leaves, use scissor or a knife to harvest handfuls of baby lettuce, or grow plants at proper spacing to get large, loose heads.",
  },
+ 
+ 
+ {
+ "cropName": "Mint",
+ "coEfficients": {
+ "init": 0.6,
+ "mid": 1.15,
+ "end": 1.1
+ },
+ "Type": "Herb",
+ "Image": "Mint.jpeg",
+ "sunExposure": "Full sun to partial afternoon shade",
+ "soilType": "Any average, well drained soil where mint's wandering tendencies can be kept in check.",
+ "soilpH": "",
+ "plant" : "Start with a purchased plant, or start seeds indoors and set out at about the time of your last frost. Mint is also easy to root from stem tip cuttings stuck into moist potting soil. Some strains are propagated only from cuttings rather than seeds.",
+ "feeding" : "Not generally needed.",
+ "spacing" : "Single Plants:(20cm) each way (minimum) Rows:(15cm) with (25cm) row gap (minimum)",
+ "notes" :  "Frequent pinching back helps to keep plants bushy and full, and it delays flowering. Spearmint or peppermint are the most versatile strain for cooking.",
+ "harvesting" : "Gather sprigs as needed in the kitchen. Gather stems for drying in early summer, just before the plants bloom."
+ },
+ 
+ 
+ {
+ "cropName": "Oats",
+ "coEfficients": {
+ "init": 0.3,
+ "mid": 1.15,
+ "end": 0.25
+ },
+ "Type": "Miscellaneous",
+ "Image": "Oats.jpeg",
+ "sunExposure": "Full sun",
+ "soilType": "Any average, well drained soil.",
+ "soilpH": "",
+ "plant" : "Sow in late summer to grow a cover crop that forms its own mulch when it is winterkilled, or when using oats as a companion crop for slower-growing legumes. Oats also can be grown as a spring cover crop to increase soil organic matter. Broadcast seed into cultivated soil so that the seeds are about 3 inches (7 cm) apart and one-half inch (1 cm) deep. No thinning is required. Increase spacing to 8 inches (20cm) apart when growing oats with other cover crops. Our Garden Planner can produce a personalized calendar of when to sow, plant and harvest for your area.",
+ "feeding" : "None generally needed, especially when oats are grown with nitrogen-fixing cover crops such as winter peas, winter beans or hairy vetch.",
+ "spacing" : "Single Plants:(10cm) each way (minimum) Rows:(10cm) with (10cm) row gap (minimum)",
+ "notes" :  "Oats are an ideal late summer cover crop where winters are cold enough to kill it; the dead residue forms its own winter mulch, which is usually well rotted by spring.",
+ "harvesting" : "Young oats can be turned under anytime. In mild winter climates, oats should be mowed and tilled before seedheads appear in late spring."
+ },
+ 
  
  {
  "cropName": "Onions",
@@ -306,6 +460,27 @@
  "harvesting" : "Harvest young onions as scallions. When bulbs form and the tops of the plants fall over, pull them and cure in a warm place for about 10 days before storing."
  },
  
+ 
+ {
+ "cropName": "Orange",
+ "coEfficients": {
+ "init": 0.5,
+ "mid": 0.45,
+ "end": 0.55
+ },
+ "Type": "Fuit",
+ "Image": "Orange.jpeg",
+ "sunExposure": "A sheltered spot in full sun. In gardens where the temperatures drop below 0 °C grow them in containers that can be moved into a warm, sheltered area during winter.",
+ "soilType": "Warm, moist soil, well-enriched with organic matter. Oranges grafted onto a dwarfing rootstock may be grown in containers",
+ "soilpH": "",
+ "plant" : "Set out new plants in late winter or early spring. Grow in containers of rich compost to keep plants compact and to make it easy to bring plants indoors for the winter. Good drainage is essential. Our Garden Planner can produce a personalised calendar of when to sow, plant and harvest for your area.",
+ "feeding" : "In spring and summer, feed with a balanced organic fertiliser. Yellowing leaves indicate a need for more nitrogen.",
+ "spacing" : "Single Plants: 5.00m each way (minimum) Rows: 5.00m with 5.00m row gap (minimum)",
+ "notes" :  "Prune in spring or summer to shape plants, and watch for thorns. Very sweet oranges need a long season of warm weather, but kumquats, calamondin oranges and satsumas fruit well in marginal areas or when grown in containers.",
+ "harvesting" : "CPick when richly coloured and fully ripe. Picking can continue for several weeks as fruits do not ripen all at once."
+ },
+ 
+ 
  {
  "cropName": "Peas",
  "coEfficients": {
@@ -325,9 +500,30 @@
  "harvesting" : "Pick snow peas when the delicate pods begin to show immature seeds inside. Gather snap peas when the pods become plump yet are still glossy and filled with sweet-tasting peas. Pick shell peas before the pods become waxy"
  },
  
+ 
  {
- "cropName": "Potato",
+ "cropName": "Pear",
  "coEfficients": {
+ "init": 0.6,
+ "mid": 0.95,
+ "end": 0.75
+ },
+ "Type": "Fuit",
+ "Image": "Pear.jpeg",
+ "sunExposure": "In cool climates, grow dwarf varieties against a wall, as an espalier. Semi-dwarf and standard pears make excellent landscape trees in large gardens.",
+ "soilType": "Moist, well-drained soil with a near-neutral pH.",
+ "soilpH": "",
+ "plant" : "Set out new plants in late winter or early spring. Grow in containers of rich compost to keep plants compact and to make it easy to bring plants indoors for the winter. Good drainage is essential. Our Garden Planner can produce a personalised calendar of when to sow, plant and harvest for your area.",
+ "feeding" : "Benefits from a mulch of well-rotted organic matter in spring, topped by a deep mulch of wood chips or sawdust year round",
+ "spacing" : "Single Plants: 2.50m each way (minimum) Rows: 2.50m with 2.50m row gap (minimum)",
+              "notes" :  "Prune in winter to remove any dead or overcrowded branches and to shape if required. Most varieties need at least one other pear tree in the neighborhood to get good pollination.",
+              "harvesting" : "Harvest pears before they fully ripen, and ripen under cool indoor temperatures."
+},
+
+ 
+{
+"cropName": "Potato",
+"coEfficients": {
  "init": 0.5,
  "mid": 1.15,
  "end": 0.75
@@ -343,6 +539,7 @@
  "notes" : "potatoes form a dense green ground cover under hot summer conditions. Tubers are often found 12 inches or more from the plant's primary crown, so dig carefully. Although not from the solanaceae family, sweet potatoes are often placed in that group for crop rotation purposes because they share several important pests and diseases such as wireworms and nematodes which is why we show it as solanaceae.",
  "harvesting" : "Dig in fall when the soil is still warm. Cure in a warm, airy place for two weeks before storing at cool room temperatures."
  },
+ 
  
  {
  "cropName": "Raspberries",
@@ -362,6 +559,7 @@
  "notes" : "After harvesting cut the canes down to ground level, leaving any new shoots.",
  "harvesting" : "Harvest fruit when ripe. Can protect with netting if birds are eating them but make sure that the plant doesn't grow through the netting making it difficult to remove."
  },
+
  
  {
  "cropName": "Strawberries",
@@ -382,11 +580,32 @@
  "harvesting" : "Gather ripe fruits in the morning, when they are cool, and refrigerate immediately. Wash in cool water just before eating."
  },
  
+ 
+ {
+ "cropName": "Sunflower",
+ "coEfficients": {
+ "init": 0.35,
+ "mid": 1.15,
+ "end": 0.35
+ },
+ "Type": "Miscellaneous",
+ "Image": "Sunflower.jpeg",
+ "sunExposure": "Full sun to partial afternoon shade",
+ "soilType": "Any average, well drained soil where mint's wandering tendencies can be kept in check.",
+ "soilpH": "",
+ "plant" : "Sow sunflowers from late spring to early summer. Where summers are long and warm, make a second sowing for autumn harvest. Poke seeds into the soil about 1 inch (3 cm) deep and 3 inches (8 cm) apart. Thin to 12 inches (30 cm) apart in all directions for dwarf varieties. Extremely tall sunflowers or those that grow into multi-branched bushes may require 3 feet (1 meter) between plants. Our Garden Planner can produce a personalized calendar of when to sow, plant and harvest for your area.",
+ "feeding" : "Mix a light application of a balanced organic fertilizer into the soil prior to planting.",
+ "spacing" : "Single Plants: (30cm) each way (minimum) Rows:(30cm) with (30cm) row gap (minimum)",
+ "notes" :  "Explore different sunflower varieties, which vary in size, color, growth habit, and the culinary quality of the seeds.",
+ "harvesting" : "Cut sunflower heads when some of the seeds inside the edges appear ripe and fall away when rubbed, or when birds start harvesting them for you. Store in a warm, dry place."
+ },
+ 
+ 
  {
  "cropName": "Watermelon",
  "coEfficients": {
  "init": 0.4,
- "mid": 1,
+ "mid": 1.0,
  "end": 0.75
  },
  "Type": "Fruit",
@@ -399,6 +618,26 @@
  "spacing" : "Single Plants: (90cm) each way (minimum) Rows: (90cm) with (90cm) row gap (minimum)",
  "notes" : "Fruit size varies with variety. Small icebox watermelons mature quickly and take up less space compared to huge watermelons.",
  "harvesting" : "Ripe watermelons sound deep and resonant when thumped, and the curled tendril opposite the melon should be brown. Wipe clean and store indoors."
+ },
  
- }
+ 
+ {
+ "cropName": "Wheat",
+ "coEfficients": {
+ "init": 0.3,
+ "mid": 1.15,
+ "end": 0.4
+ },
+ "Type": "Cereal",
+ "Image": "Wheat.jpeg",
+ "sunExposure": "Full Sun",
+ "soilType": "Any well drained soil.",
+ "soilpH": "Acidic",
+ "plant" : "Sow in late summer or early fall for an overwintered crop. Spring wheat can be planted while the soil is still cool. Broadcast seed into cultivated soil so that the seeds are about 3 inches (7 cm) apart and one-half inch (1 cm) deep. No thinning is required. Increase spacing to 8 inches (20cm) apart when growing wheat with other cover crops.",
+ "feeding" : "When using wheat to improve very poor soil, mixing a balanced organic fertilizer into the soil before planting will give better results.",
+ "spacing" : "Single Plants: (10cm) each way (minimum) Rows: (10cm) with (10cm) row gap (minimum)",
+ "notes" : "Primarily grown to increase organic matter, break up dense subsoil and crowd out weeds. Makes a beautiful show in spring.",
+ "harvesting" : "Mow down plants in spring, before they develop seeds. Or, gather the immature seed tops and dry them for arrangements, and then pull up the plants. They can be used as mulch or composted."
+ },
+ 
  ]
