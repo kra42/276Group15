@@ -25,6 +25,7 @@ class MyGarden{
     }
     
     init(Name name:String,Address address:String,GardenID id:String) {
+        
         self.gardenName=name
         self.address=address
         self.gardenID=id
