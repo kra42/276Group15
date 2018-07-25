@@ -470,15 +470,8 @@
                                                     </segments>
                                                     <color key="tintColor" red="0.61263020833333337" green="0.81146280126633985" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </segmentedControl>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="cm^2" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-V4-Wg3">
-                                                    <rect key="frame" x="98" y="100" width="66" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plot Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieh-R2-lWy">
-                                                    <rect key="frame" x="20" y="100" width="79" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plot Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieh-R2-lWy">
+                                                    <rect key="frame" x="15" y="105" width="79" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -498,13 +491,23 @@
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Water"/>
                                                 </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="cm^2" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-V4-Wg3">
+                                                    <rect key="frame" x="98" y="105" width="66" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="enableReminder" destination="c17-ea-vxE" id="1Gu-qY-cxG"/>
-                                            <outlet property="selectDays" destination="jBU-Ee-evO" id="hs4-CZ-t6v"/>
+                                            <outlet property="plotSize" destination="uY5-V4-Wg3" id="1sU-xA-aet"/>
+                                            <outlet property="selectDays" destination="jBU-Ee-evO" id="iYS-mF-PmY"/>
                                             <outlet property="setReminder" destination="W3E-ug-YIA" id="Dyi-Vz-Xv5"/>
                                             <outlet property="timeField" destination="zcy-om-2gY" id="tgC-fR-brw"/>
+                                            <outlet property="waterAmount" destination="DIN-ou-NRD" id="WNR-Ca-tY1"/>
+                                            <outlet property="waterButton" destination="cc8-6J-sww" id="Ffv-Ur-SIO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -15,6 +15,9 @@ class ExpandedCropCell: UITableViewCell {
     @IBOutlet weak var enableReminder: UISwitch!
     @IBOutlet weak var selectDays: MultiSelectSegmentedControl!
     @IBOutlet weak var timeField: UITextField!
+    @IBOutlet weak var waterButton: UIButton!
+    @IBOutlet weak var waterAmount: UILabel!
+    @IBOutlet weak var plotSize: UITextField!
     
     private var timePicker: UIDatePicker!
     

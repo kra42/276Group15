@@ -19,6 +19,7 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     var myGarden: MyGarden!
     var cropList: [CropProfile?]?
     var Online:Bool?
+    var isExtended: Int?
     let ref=Database.database().reference()
     
     
@@ -56,6 +57,7 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewWillAppear(animated)
         self.myGarden = GardenList[gardenIndex]
         self.cropList = GardenList[gardenIndex]?.cropProfile
+        self.isExtended = nil
         self.tableView.reloadData()
         
         
@@ -65,7 +67,7 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if let data = cropList?[indexPath.row] {
+        if (cropList?[indexPath.row]) != nil {
             return 120
         } else {
             return 155
@@ -114,7 +116,7 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     @objc func openCropDetails(sender: UIButton){
-        let passedIndex = sender.tag
+        self.myIndex = sender.tag
         performSegue(withIdentifier: "CropProfileSegue", sender: self)
     }
     
@@ -122,17 +124,17 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     @objc func deleteCrop(sender: UIButton){
         let passedIndex = sender.tag
         
-        let alert = UIAlertController(title: "Remove Crop from Garden?", message: myGarden.cropProfile[passedIndex].GetCropName(), preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Remove Crop from Garden?", message: myGarden.cropProfile[passedIndex]?.GetCropName(), preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: { (action) in
             alert.dismiss(animated:true, completion:nil)
             print("DELETE")
             
             if self.myGarden.getOnlineState(){
-                let cropid=self.myGarden.cropProfile[passedIndex].cropID
+                let cropid=self.myGarden.cropProfile[passedIndex]?.cropID
                 self.RemoveCropFromFB(cropid!)
             }
-            
+            self.cropList?.remove(at: passedIndex)
             self.myGarden.cropProfile.remove(at: passedIndex)
             self.tableView.reloadData()
         }))
@@ -152,10 +154,30 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     /*  Expand cell at given index  */
     private func expandCell(tableView: UITableView, index: Int) {
-        // Expand Cell (add ExpansionCells
+        // Expand Cell -> add ExpansionCells
         if (cropList?[index]) != nil {
-            cropList?.insert(nil, at: index + 1)
-            tableView.insertRows(at: [NSIndexPath(row: index + 1, section: 0) as IndexPath] , with: .top)
+            // If a cell is currently expanded, close it before opening another
+            if let Extended = self.isExtended{
+                cropList?.remove(at: Extended + 1)
+                if (index > Extended){
+                    // Selected cell is greater than currently expanded cell
+                    tableView.deleteRows(at: [NSIndexPath(row: Extended+1, section: 0) as IndexPath], with: .top)
+                    self.isExtended = index - 1
+                    cropList?.insert(nil, at: index)
+                    tableView.insertRows(at: [NSIndexPath(row: index, section: 0) as IndexPath] , with: .top)
+                } else if (index<Extended) {
+                    // Selected cell is less than currently expanded cell
+                    tableView.deleteRows(at: [NSIndexPath(row: Extended+1, section: 0) as IndexPath], with: .bottom)
+                    self.isExtended = index
+                    cropList?.insert(nil, at: index+1)
+                    tableView.insertRows(at: [NSIndexPath(row: index+1, section: 0) as IndexPath] , with: .top)
+                }
+            } else {
+                // If no cell is currently expanded, just expand
+                cropList?.insert(nil, at: index + 1)
+                self.isExtended = index
+                tableView.insertRows(at: [NSIndexPath(row: index + 1, section: 0) as IndexPath] , with: .top)
+            }
         }
     }
     
@@ -163,6 +185,7 @@ class GardenCropList: UIViewController,UITableViewDelegate,UITableViewDataSource
     private func contractCell(tableView: UITableView, index: Int) {
         if (cropList?[index]) != nil {
             cropList?.remove(at: index+1)
+            self.isExtended = nil
             tableView.deleteRows(at: [NSIndexPath(row: index+1, section: 0) as IndexPath], with: .top)
         }
     }
